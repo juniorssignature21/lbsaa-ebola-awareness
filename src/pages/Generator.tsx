@@ -32,7 +32,7 @@ import { ResetDialog } from '../components/ResetDialog';
 import { Modal } from '../components/Modal';
 import { Toast, type ToastMessage, type ToastTone } from '../components/Toast';
 import { PosterCanvas } from '../components/posters/PosterCanvas';
-import { BrandLogo } from '../components/BrandLogo';
+import { BrandMarks } from '../components/BrandLogo';
 import {
   CAMPAIGN_SHARE_MESSAGE,
   POSTER_SIZES,
@@ -501,11 +501,12 @@ export function Generator() {
                   <div className="generation-overlay" role="status" aria-live="polite">
                     <div className="generation-orbit" aria-hidden="true">
                       <span className="generation-orbit__ring" />
-                      <BrandLogo
+                      <BrandMarks
                         theme="blue"
                         variant="emblem"
-                        alt=""
-                        className="generation-orbit__logo"
+                        className="generation-orbit__marks"
+                        logoClassName="generation-orbit__logo"
+                        schoolLogoClassName="generation-orbit__logo"
                       />
                     </div>
                     <strong>{GENERATION_STEPS[generationStep]}</strong>

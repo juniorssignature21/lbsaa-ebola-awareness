@@ -6,7 +6,7 @@ import {
   Phone,
   ShieldCheck,
 } from 'lucide-react';
-import { BrandLogo } from '../BrandLogo';
+import { BrandMarks } from '../BrandLogo';
 import {
   DISCLAIMER,
   LBSAA_MOTTO,
@@ -27,11 +27,13 @@ export function PosterWordmark({
 }) {
   return (
     <div className={`poster-wordmark poster-wordmark--${theme}`}>
-      <BrandLogo
+      <BrandMarks
         theme={theme === 'light' ? 'white' : 'navy'}
         variant="emblem"
-        alt=""
-        className="poster-wordmark__mark"
+        className="poster-wordmark__marks"
+        logoClassName="poster-wordmark__mark"
+        schoolLogoClassName="poster-wordmark__mark poster-wordmark__mark--school"
+        divider
       />
       <div className="poster-wordmark__copy">
         <span>LAGOS BUSINESS SCHOOL</span>

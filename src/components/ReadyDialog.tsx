@@ -9,6 +9,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { POSTER_SIZES } from '../data/campaignContent';
+import { BrandMarks } from './BrandLogo';
 import { Modal } from './Modal';
 
 interface ReadyDialogProps {
@@ -44,10 +45,12 @@ export function ReadyDialog({
     >
       <div className="ready-dialog__art" aria-hidden="true">
         <span className="ready-dialog__halo" />
-        <img
-          src="/assets/lbsaa-emblem-blue.png"
-          alt=""
-          className="ready-dialog__emblem"
+        <BrandMarks
+          theme="blue"
+          variant="emblem"
+          className="ready-dialog__marks"
+          logoClassName="ready-dialog__emblem"
+          schoolLogoClassName="ready-dialog__emblem"
         />
         <span className="ready-dialog__check">
           <Check size={30} strokeWidth={3} />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
-import { BrandLogo } from './BrandLogo';
+import { BrandMarks } from './BrandLogo';
 
 interface HeaderProps {
   invert?: boolean;
@@ -37,8 +37,14 @@ export function SiteHeader({ invert = false }: HeaderProps) {
   return (
     <header className={`site-header${invert ? ' site-header--invert' : ''}`}>
       <div className="shell site-header__inner">
-        <Link to="/" className="site-header__brand" aria-label="LBSAA home">
-          <BrandLogo theme={invert ? 'white' : 'navy'} className="site-header__logo" />
+        <Link to="/" className="site-header__brand" aria-label="Ebola Awareness campaign home">
+          <BrandMarks
+            theme={invert ? 'white' : 'navy'}
+            className="site-header__marks"
+            logoClassName="site-header__logo"
+            schoolLogoClassName="site-header__school-logo"
+            divider
+          />
           <span className="site-header__brand-divider" aria-hidden="true" />
           <span className="site-header__brand-copy">
             <span>EBOLA</span>

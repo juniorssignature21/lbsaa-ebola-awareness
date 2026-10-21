@@ -1,6 +1,6 @@
 import { ArrowUpRight, LockKeyhole, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { BrandLogo } from './BrandLogo';
+import { BrandMarks } from './BrandLogo';
 import { DISCLAIMER, ORGANISATION_NAME } from '../data/campaignContent';
 
 export function SiteFooter() {
@@ -8,14 +8,14 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell site-footer__top">
         <div className="site-footer__brand">
-          <div className="site-footer__marks">
-            <BrandLogo theme="white" className="site-footer__logo" />
-            <img
-              src="/assets/lbs-school-logo.png"
-              alt="Lagos Business School, Pan-Atlantic University"
-              className="site-footer__school-logo"
-            />
-          </div>
+          <BrandMarks
+            theme="white"
+            className="site-footer__marks"
+            logoClassName="site-footer__logo"
+            schoolLogoClassName="site-footer__school-logo"
+            divider
+            decorative={false}
+          />
           <p>
             A community health initiative from the Lagos Business School Alumni
             Association.

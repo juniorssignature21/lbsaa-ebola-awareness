@@ -88,6 +88,16 @@
   flex-shrink: 0;
 }
 
+.poster-wordmark__marks {
+  gap: 9px;
+}
+
+.poster-wordmark .brand-marks__divider {
+  align-self: stretch;
+  height: auto;
+  opacity: 0.24;
+}
+
 .poster-wordmark__mark {
   width: auto;
   height: 56px;

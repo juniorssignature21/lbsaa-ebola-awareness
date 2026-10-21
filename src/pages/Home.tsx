@@ -18,7 +18,7 @@ import { SiteHeader } from '../components/SiteHeader';
 import { SiteFooter } from '../components/SiteFooter';
 import { PosterPreview } from '../components/PosterPreview';
 import { TemplatePicker } from '../components/TemplatePicker';
-import { BrandLogo } from '../components/BrandLogo';
+import { BrandMarks } from '../components/BrandLogo';
 import {
   ALERT_HEADLINE,
   CAMPAIGN_NOTICE,
@@ -334,7 +334,13 @@ export function Home() {
                 />
               </div>
               <div className="sample-poster-section__caption">
-                <BrandLogo theme="navy" variant="emblem" className="sample-caption-logo" />
+                <BrandMarks
+                  theme="navy"
+                  variant="emblem"
+                  className="sample-caption-marks"
+                  logoClassName="sample-caption-logo"
+                  schoolLogoClassName="sample-caption-logo"
+                />
                 <span>
                   SAMPLE MEMBER POSTER
                   <small>Name and role from the LBSAA reference campaign.</small>

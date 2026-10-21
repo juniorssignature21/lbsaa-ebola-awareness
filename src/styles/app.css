@@ -434,6 +434,32 @@ textarea::placeholder {
   height: 30px;
 }
 
+/* ---------- Brand marks ---------- */
+
+.brand-marks {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.brand-marks__logo,
+.brand-marks__school-logo {
+  display: block;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.brand-marks__divider {
+  align-self: center;
+  width: 1px;
+  height: 34px;
+  flex-shrink: 0;
+  background: currentColor;
+  opacity: 0.2;
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -461,10 +487,19 @@ textarea::placeholder {
   border-radius: 8px;
 }
 
-.site-header__logo {
-  width: 128px;
+.site-header__marks {
+  gap: 12px;
+}
+
+.site-header__logo,
+.site-header__school-logo {
+  width: 106px;
   height: auto;
   flex-shrink: 0;
+}
+
+.site-header__marks .brand-marks__divider {
+  height: 36px;
 }
 
 .site-header__brand-divider {
@@ -1221,9 +1256,13 @@ textarea::placeholder {
   line-height: 1.5;
 }
 
+.sample-caption-marks {
+  gap: 6px;
+}
+
 .sample-caption-logo {
-  width: 26px;
-  height: auto;
+  height: 26px;
+  width: auto;
 }
 
 /* ---------- Template picker ---------- */
@@ -1609,8 +1648,9 @@ textarea::placeholder {
   padding: 64px 0 46px;
 }
 
-.site-footer__logo {
-  width: 176px;
+.site-footer__logo,
+.site-footer__school-logo {
+  width: 168px;
   height: auto;
 }
 
@@ -2828,9 +2868,13 @@ textarea::placeholder {
   animation: orbit 0.9s linear infinite;
 }
 
+.generation-orbit__marks {
+  gap: 6px;
+}
+
 .generation-orbit__logo {
-  width: 29px;
-  height: auto;
+  height: 25px;
+  width: auto;
 }
 
 .generation-overlay strong {
@@ -3209,9 +3253,13 @@ textarea::placeholder {
   border-radius: 50%;
 }
 
+.ready-dialog__marks {
+  gap: 7px;
+}
+
 .ready-dialog__emblem {
-  width: 34px;
-  height: auto;
+  height: 34px;
+  width: auto;
   opacity: 0.92;
 }
 
@@ -3660,8 +3708,17 @@ textarea::placeholder {
     gap: 12px;
   }
 
-  .site-header__logo {
-    width: 110px;
+  .site-header__logo,
+  .site-header__school-logo {
+    width: 84px;
+  }
+
+  .site-header__marks {
+    gap: 9px;
+  }
+
+  .site-header__marks .brand-marks__divider {
+    height: 29px;
   }
 
   .site-header__brand-divider {
@@ -3877,8 +3934,13 @@ textarea::placeholder {
     grid-column: auto;
   }
 
-  .site-footer__logo {
-    width: 160px;
+  .site-footer__logo,
+  .site-footer__school-logo {
+    width: 152px;
+  }
+
+  .site-footer__marks .brand-marks__divider {
+    height: 56px;
   }
 
   .site-footer__disclaimer {
@@ -4124,8 +4186,17 @@ textarea::placeholder {
     width: calc(100% - 24px);
   }
 
-  .site-header__logo {
-    width: 96px;
+  .site-header__logo,
+  .site-header__school-logo {
+    width: 72px;
+  }
+
+  .site-header__marks {
+    gap: 8px;
+  }
+
+  .site-header__marks .brand-marks__divider {
+    height: 25px;
   }
 
   .site-header__brand {
@@ -4214,10 +4285,7 @@ textarea::placeholder {
   gap: 14px 18px;
 }
 
-.site-footer__school-logo {
-  width: 176px;
-  height: auto;
-  padding: 9px 11px;
-  border-radius: 7px;
-  background: #ffffff;
+.site-footer__marks .brand-marks__divider {
+  height: 64px;
+  opacity: 0.3;
 }
