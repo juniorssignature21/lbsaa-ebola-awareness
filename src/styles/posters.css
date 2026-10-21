@@ -1,0 +1,4632 @@
+/* =========================================================
+   LBSAA Ebola awareness posters
+   Fixed 1080 × 1350 · 1080 × 1920 · 1200 × 630 designs
+   ========================================================= */
+
+.poster-canvas {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  color: #17243a;
+  font-family: 'Manrope Variable', 'Manrope', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.poster-canvas *,
+.poster-canvas *::before,
+.poster-canvas *::after {
+  box-sizing: border-box;
+}
+
+.poster-canvas img {
+  max-width: none;
+}
+
+.poster {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.poster h1,
+.poster h2,
+.poster h3,
+.poster p,
+.poster ul {
+  margin: 0;
+  padding: 0;
+}
+
+.poster ul {
+  list-style: none;
+}
+
+.poster svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.poster strong {
+  font-weight: inherit;
+}
+
+/* ---------- Name sizing system ---------- */
+
+.poster-name {
+  font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  font-size: var(--poster-name-size, 60px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.01;
+  overflow-wrap: anywhere;
+}
+
+.poster-name--medium {
+  font-size: calc(var(--poster-name-size, 60px) * 0.84);
+  letter-spacing: -0.04em;
+}
+
+.poster-name--long {
+  font-size: calc(var(--poster-name-size, 60px) * 0.69);
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+}
+
+/* ---------- Shared wordmark ---------- */
+
+.poster-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.poster-wordmark__mark {
+  width: auto;
+  height: 56px;
+  object-fit: contain;
+}
+
+.poster-wordmark__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1.2;
+}
+
+.poster-wordmark__copy span {
+  font-family: 'Manrope Variable', 'Manrope', sans-serif;
+  font-size: 8.4px;
+  font-weight: 650;
+  letter-spacing: 0.115em;
+}
+
+.poster-wordmark__copy strong {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 13.8px;
+  font-weight: 730;
+  letter-spacing: 0.055em;
+}
+
+.poster-wordmark--light {
+  color: #ffffff;
+}
+
+.poster-wordmark--dark {
+  color: #063a78;
+}
+
+/* ---------- Shared portrait ---------- */
+
+.poster-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #dbe9f6;
+}
+
+.poster-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-photo__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.8), transparent 48%),
+    linear-gradient(155deg, #eaf4ff, #cfe6fa);
+  color: #0755a5;
+}
+
+.poster-photo__initials {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 76px;
+  font-weight: 750;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  opacity: 0.82;
+}
+
+.poster-photo__placeholder-label {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  opacity: 0.58;
+}
+
+/* ---------- Shared contacts ---------- */
+
+.poster-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 17px;
+  min-width: 0;
+}
+
+.poster-contacts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  font-size: 10.5px;
+  font-weight: 550;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.poster-contacts svg {
+  width: 11px;
+  height: 11px;
+  stroke-width: 2.2;
+}
+
+.poster-contacts--light {
+  color: rgba(239, 248, 255, 0.68);
+}
+
+.poster-contacts--dark {
+  color: #647990;
+}
+
+.poster-contacts--compact {
+  gap: 4px 14px;
+}
+
+/* ---------- Shared verified notice ---------- */
+
+.poster-verified {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 11px;
+  padding: 7px 11px 7px 9px;
+  border-left: 3px solid #c8202f;
+  border-radius: 0 6px 6px 0;
+  background: #fff1f2;
+  color: #7b1720;
+  text-align: left;
+}
+
+.poster-verified > svg {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  color: #c8202f;
+  stroke-width: 2.1;
+}
+
+.poster-verified > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.poster-verified__label {
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  line-height: 1.5;
+  color: #b01e2b;
+}
+
+.poster-verified strong {
+  font-size: 10.8px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.poster-verified__source {
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #9a4d54;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Shared values, motto, disclaimer, meta ---------- */
+
+.poster-values {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 15px;
+  min-width: 0;
+}
+
+.poster-values__label {
+  font-size: 8.4px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  white-space: nowrap;
+}
+
+.poster-values__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 7px;
+  font-size: 8.4px;
+  font-weight: 700;
+  letter-spacing: 0.065em;
+  line-height: 1.5;
+}
+
+.poster-values__list > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.poster-values__list i {
+  font-style: normal;
+  opacity: 0.36;
+}
+
+.poster-values--light .poster-values__label {
+  color: #83c5ff;
+}
+
+.poster-values--light .poster-values__list {
+  color: rgba(236, 247, 255, 0.7);
+}
+
+.poster-values--dark .poster-values__label {
+  color: #8498ac;
+}
+
+.poster-values--dark .poster-values__list {
+  color: #4e647b;
+}
+
+.poster-motto {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.poster-disclaimer {
+  margin: 0;
+  font-size: 9.2px;
+  font-weight: 450;
+  line-height: 1.5;
+}
+
+.poster-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 15px;
+}
+
+.poster-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.8px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.poster-meta svg {
+  width: 12px;
+  height: 12px;
+  stroke-width: 2.1;
+}
+
+.poster-meta--light {
+  color: rgba(231, 244, 255, 0.72);
+}
+
+.poster-meta--dark {
+  color: #5a7188;
+}
+
+/* =========================================================
+   TEMPLATE A — OFFICIAL CAMPAIGN
+   ========================================================= */
+
+.poster--official {
+  background: #f7fbff;
+  color: #17243a;
+}
+
+.poster--official .op-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.poster--official .op-pattern__ring {
+  position: absolute;
+  border: 1px solid rgba(7, 85, 165, 0.08);
+  border-radius: 50%;
+}
+
+.poster--official .op-pattern__ring--one {
+  top: 150px;
+  right: -290px;
+  width: 580px;
+  height: 580px;
+}
+
+.poster--official .op-pattern__ring--two {
+  top: 200px;
+  right: -240px;
+  width: 470px;
+  height: 470px;
+  border-color: rgba(7, 85, 165, 0.055);
+}
+
+.poster--official .op-pattern__dots {
+  position: absolute;
+  top: 760px;
+  left: 30px;
+  width: 170px;
+  height: 120px;
+  background-image: radial-gradient(circle, rgba(7, 85, 165, 0.1) 1px, transparent 1.2px);
+  background-size: 13px 13px;
+  opacity: 0.7;
+}
+
+.poster--official .op-header,
+.poster--official .op-alert,
+.poster--official .op-hero,
+.poster--official .op-health,
+.poster--official .op-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Official header */
+
+.poster--official .op-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-shrink: 0;
+  padding: 0 54px;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(73, 147, 226, 0.25), transparent 34%),
+    linear-gradient(110deg, #032249 0%, #063a78 58%, #0755a5 100%);
+  color: #ffffff;
+}
+
+.poster--official .op-header::after {
+  content: '';
+  position: absolute;
+  left: 54px;
+  right: 54px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.poster--official .op-header__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  padding-left: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  line-height: 1.25;
+  text-align: right;
+}
+
+.poster--official .op-header__campaign {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.poster--official .op-header__sub {
+  font-size: 7.8px;
+  font-weight: 550;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Official alert */
+
+.poster--official .op-alert {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  padding: 0 54px;
+  background: linear-gradient(90deg, #b71a27 0%, #c8202f 55%, #a61523 100%);
+  color: #ffffff;
+}
+
+.poster--official .op-alert__icon {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.poster--official .op-alert__icon svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.2;
+}
+
+.poster--official .op-alert strong {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 18.5px;
+  font-weight: 750;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+}
+
+.poster--official .op-alert__tag {
+  margin-left: auto;
+  padding-left: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.26);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.74);
+  white-space: nowrap;
+}
+
+/* Official hero */
+
+.poster--official .op-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 30px;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 27px 54px 25px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(7, 85, 165, 0.1), transparent 40%),
+    linear-gradient(152deg, #f9fcff 0%, #eef7ff 55%, #e6f2fe 100%);
+}
+
+.poster--official .op-hero::before {
+  content: '';
+  position: absolute;
+  top: 42px;
+  right: 255px;
+  width: 190px;
+  height: 210px;
+  background-image: radial-gradient(circle, rgba(7, 85, 165, 0.14) 1px, transparent 1.3px);
+  background-size: 12px 12px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.poster--official .op-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.poster--official .op-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #0755a5;
+  font-size: 9.3px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
+.poster--official .op-hero__eyebrow::before {
+  content: '';
+  width: 17px;
+  height: 2px;
+  background: #c8202f;
+}
+
+.poster--official .poster-name {
+  color: #063a78;
+}
+
+.poster--official .op-hero__role {
+  margin-top: 8px;
+  color: #40576f;
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.poster--official .op-hero__rule {
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin: 14px 0 13px;
+  border-radius: 99px;
+  background: #c8202f;
+  flex-shrink: 0;
+}
+
+.poster--official .op-hero__quote {
+  max-width: 580px;
+  color: #314961;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.52;
+  overflow-wrap: anywhere;
+}
+
+.poster--official .op-hero__quote--long {
+  font-size: 17.2px;
+  line-height: 1.48;
+}
+
+.poster--official .op-hero .poster-meta {
+  margin-top: 13px;
+}
+
+.poster--official .op-hero .poster-verified {
+  margin-bottom: 10px;
+}
+
+.poster--official .op-portrait {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.poster--official .op-portrait__halo {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 306px;
+  height: 362px;
+  border: 1px solid rgba(7, 85, 165, 0.16);
+  border-radius: 153px 153px 14px 14px;
+  transform: translateX(-50%);
+}
+
+.poster--official .op-portrait__frame {
+  position: relative;
+  z-index: 1;
+  width: 292px;
+  height: 342px;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  border-radius: 146px 146px 10px 10px;
+  background: #dbe9f6;
+  box-shadow: 0 18px 38px rgba(5, 42, 82, 0.18);
+}
+
+.poster--official .op-portrait__badge {
+  position: absolute;
+  right: -3px;
+  bottom: 63px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(4, 34, 68, 0.2);
+  color: #063a78;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 7.8px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.poster--official .op-portrait__badge svg {
+  width: 18px;
+  height: 18px;
+  color: #0755a5;
+}
+
+.poster--official .op-portrait__label {
+  position: relative;
+  z-index: 2;
+  margin-top: 9px;
+  color: #5d748a;
+  font-size: 7.8px;
+  font-weight: 750;
+  letter-spacing: 0.115em;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Official health */
+
+.poster--official .op-health {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 18px 54px 20px;
+  background: #ffffff;
+}
+
+.poster--official .op-health__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-shrink: 0;
+  padding-bottom: 9px;
+}
+
+.poster--official .op-health__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0755a5;
+  font-size: 8.6px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+}
+
+.poster--official .op-health__eyebrow svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 2.3;
+}
+
+.poster--official .op-health__header h2 {
+  margin-top: 4px;
+  color: #063a78;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 30px;
+  font-weight: 760;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.poster--official .op-health__side {
+  padding-bottom: 2px;
+  color: #92a5b8;
+  font-size: 7.8px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  line-height: 1.4;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.poster--official .op-health__grid {
+  display: grid;
+  grid-template-columns: 1.14fr 0.86fr;
+  gap: 13px;
+  flex: 1;
+  min-height: 0;
+  margin-top: 9px;
+}
+
+.poster--official .op-facts {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding: 14px 17px 13px;
+  border: 1px solid #e0edf8;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(7, 85, 165, 0.045), transparent 34%),
+    #f8fbff;
+}
+
+.poster--official .op-facts__intro {
+  color: #384d63;
+  font-size: 16.4px;
+  font-weight: 500;
+  line-height: 1.48;
+}
+
+.poster--official .op-facts h3 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 11px 0 6px;
+  color: #063a78;
+  font-size: 14.6px;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  line-height: 1.3;
+}
+
+.poster--official .op-facts h3 svg {
+  width: 15px;
+  height: 15px;
+  color: #0755a5;
+  stroke-width: 2.2;
+}
+
+.poster--official .op-symptoms {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 4px;
+}
+
+.poster--official .op-symptoms li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #314a61;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.34;
+}
+
+.poster--official .op-symptoms__dot {
+  width: 5px;
+  height: 5px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: #0755a5;
+  flex-shrink: 0;
+}
+
+.poster--official .op-caution {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 0;
+  padding-top: 10px;
+  color: #687d90;
+  font-size: 12.6px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.42;
+}
+
+.poster--official .op-caution svg {
+  width: 12px;
+  height: 12px;
+  margin-top: 1px;
+  color: #0755a5;
+  stroke-width: 2.2;
+}
+
+.poster--official .op-prevention {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding: 14px 16px 13px;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(69, 151, 235, 0.24), transparent 40%),
+    linear-gradient(155deg, #063b77 0%, #042a58 100%);
+  color: #ffffff;
+}
+
+.poster--official .op-prevention h3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 14.2px;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  line-height: 1.32;
+}
+
+.poster--official .op-prevention h3 svg {
+  width: 15px;
+  height: 15px;
+  margin-top: 1px;
+  color: #8dc9ff;
+  stroke-width: 2.2;
+}
+
+.poster--official .op-prevention__list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.poster--official .op-prevention__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  color: rgba(235, 247, 255, 0.86);
+  font-size: 13.4px;
+  font-weight: 500;
+  line-height: 1.36;
+}
+
+.poster--official .op-check {
+  display: grid;
+  place-items: center;
+  width: 13px;
+  height: 13px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(126, 193, 255, 0.16);
+  color: #b8e0ff;
+  flex-shrink: 0;
+}
+
+.poster--official .op-check svg {
+  width: 8px;
+  height: 8px;
+  stroke-width: 3;
+}
+
+.poster--official .op-callout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  margin-top: 10px;
+  padding: 9px 42px 9px 14px;
+  border: 1px solid #efc9ce;
+  border-left: 4px solid #c8202f;
+  border-radius: 7px;
+  background: #fff4f5;
+}
+
+.poster--official .op-callout > svg:first-child {
+  width: 19px;
+  height: 19px;
+  color: #c8202f;
+  stroke-width: 2.2;
+}
+
+.poster--official .op-callout p {
+  flex: 1;
+  color: #8c1823;
+  font-size: 13.2px;
+  font-weight: 800;
+  letter-spacing: 0.018em;
+  line-height: 1.42;
+}
+
+.poster--official .op-callout__shield {
+  position: absolute;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  color: rgba(200, 32, 47, 0.28);
+  stroke-width: 1.8;
+}
+
+/* Official footer */
+
+.poster--official .op-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 14px 54px 13px;
+  background:
+    radial-gradient(circle at 88% 100%, rgba(44, 130, 217, 0.2), transparent 38%),
+    linear-gradient(110deg, #042447 0%, #063a78 100%);
+  color: #ffffff;
+}
+
+.poster--official .op-footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.poster--official .op-footer__motto {
+  color: #d9efff;
+}
+
+.poster--official .op-footer .poster-contacts {
+  padding: 2px 0;
+}
+
+.poster--official .op-footer__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 22px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.poster--official .op-footer__disclaimer {
+  max-width: 720px;
+  color: rgba(225, 240, 255, 0.48);
+}
+
+.poster--official .op-footer__signoff {
+  flex-shrink: 0;
+  color: #86c5ff;
+  font-size: 7.7px;
+  font-weight: 800;
+  letter-spacing: 0.115em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* Official — portrait rows */
+
+.poster--official.poster--portrait {
+  --poster-name-size: 62px;
+}
+
+.poster--official.poster--portrait .op-header {
+  height: 100px;
+}
+
+.poster--official.poster--portrait .op-alert {
+  height: 60px;
+}
+
+.poster--official.poster--portrait .op-hero {
+  height: 440px;
+}
+
+.poster--official.poster--portrait .op-footer {
+  height: auto;
+  padding: 18px 54px 16px;
+}
+
+/* Official — story rows */
+
+.poster--official.poster--story {
+  --poster-name-size: 76px;
+}
+
+.poster--official.poster--story .op-header {
+  height: 128px;
+  padding-inline: 62px;
+}
+
+.poster--official.poster--story .op-header::after {
+  left: 62px;
+  right: 62px;
+}
+
+.poster--official.poster--story .poster-wordmark {
+  gap: 15px;
+}
+
+.poster--official.poster--story .poster-wordmark__mark {
+  height: 68px;
+}
+
+.poster--official.poster--story .poster-wordmark__copy span {
+  font-size: 10px;
+}
+
+.poster--official.poster--story .poster-wordmark__copy strong {
+  font-size: 17px;
+}
+
+.poster--official.poster--story .op-header__campaign {
+  font-size: 12px;
+}
+
+.poster--official.poster--story .op-header__sub {
+  font-size: 9px;
+}
+
+.poster--official.poster--story .op-alert {
+  height: 76px;
+  padding-inline: 62px;
+  gap: 15px;
+}
+
+.poster--official.poster--story .op-alert__icon {
+  width: 33px;
+  height: 33px;
+}
+
+.poster--official.poster--story .op-alert__icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.poster--official.poster--story .op-alert strong {
+  font-size: 22px;
+}
+
+.poster--official.poster--story .op-alert__tag {
+  font-size: 9.5px;
+}
+
+.poster--official.poster--story .op-hero {
+  height: 686px;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 40px;
+  padding: 38px 62px 34px;
+}
+
+.poster--official.poster--story .op-hero::before {
+  top: 80px;
+  right: 300px;
+  width: 240px;
+  height: 290px;
+}
+
+.poster--official.poster--story .op-hero__eyebrow {
+  margin-bottom: 14px;
+  font-size: 11px;
+}
+
+.poster--official.poster--story .op-hero__role {
+  margin-top: 12px;
+  font-size: 18.5px;
+}
+
+.poster--official.poster--story .op-hero__rule {
+  width: 64px;
+  height: 4px;
+  margin: 19px 0 18px;
+}
+
+.poster--official.poster--story .op-hero__quote {
+  font-size: 24px;
+  line-height: 1.55;
+}
+
+.poster--official.poster--story .op-hero__quote--long {
+  font-size: 21px;
+}
+
+.poster--official.poster--story .op-hero .poster-meta {
+  margin-top: 19px;
+  gap: 8px 20px;
+}
+
+.poster--official.poster--story .op-hero .poster-meta span {
+  font-size: 12.5px;
+}
+
+.poster--official.poster--story .op-portrait__halo {
+  top: -14px;
+  width: 374px;
+  height: 524px;
+  border-radius: 187px 187px 18px 18px;
+}
+
+.poster--official.poster--story .op-portrait__frame {
+  width: 356px;
+  height: 504px;
+  border-width: 6px;
+  border-radius: 178px 178px 13px 13px;
+}
+
+.poster--official.poster--story .op-portrait__badge {
+  right: -4px;
+  bottom: 120px;
+  gap: 9px;
+  padding: 10px 14px;
+  font-size: 9.5px;
+}
+
+.poster--official.poster--story .op-portrait__badge svg {
+  width: 21px;
+  height: 21px;
+}
+
+.poster--official.poster--story .op-portrait__label {
+  margin-top: 11px;
+  font-size: 9px;
+}
+
+.poster--official.poster--story .poster-verified {
+  margin-bottom: 14px;
+  padding: 9px 13px 9px 11px;
+}
+
+.poster--official.poster--story .poster-verified__label {
+  font-size: 8px;
+}
+
+.poster--official.poster--story .poster-verified strong {
+  font-size: 12px;
+}
+
+.poster--official.poster--story .poster-verified__source {
+  font-size: 9px;
+}
+
+.poster--official.poster--story .op-health {
+  padding: 27px 62px 28px;
+}
+
+.poster--official.poster--story .op-health__header {
+  padding-bottom: 13px;
+}
+
+.poster--official.poster--story .op-health__eyebrow {
+  font-size: 10px;
+}
+
+.poster--official.poster--story .op-health__header h2 {
+  margin-top: 6px;
+  font-size: 39px;
+}
+
+.poster--official.poster--story .op-health__side {
+  font-size: 9px;
+}
+
+.poster--official.poster--story .op-health__grid {
+  gap: 18px;
+  margin-top: 13px;
+}
+
+.poster--official.poster--story .op-facts {
+  padding: 22px 25px 20px;
+  border-radius: 13px;
+}
+
+.poster--official.poster--story .op-facts__intro {
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.poster--official.poster--story .op-facts h3 {
+  gap: 9px;
+  margin: 18px 0 11px;
+  font-size: 17px;
+}
+
+.poster--official.poster--story .op-facts h3 svg {
+  width: 18px;
+  height: 18px;
+}
+
+.poster--official.poster--story .op-symptoms {
+  gap: 8px;
+}
+
+.poster--official.poster--story .op-symptoms li {
+  gap: 10px;
+  font-size: 18.5px;
+  line-height: 1.42;
+}
+
+.poster--official.poster--story .op-symptoms__dot {
+  width: 6px;
+  height: 6px;
+  margin-top: 9px;
+}
+
+.poster--official.poster--story .op-caution {
+  gap: 8px;
+  padding-top: 13px;
+  font-size: 14.5px;
+  line-height: 1.48;
+}
+
+.poster--official.poster--story .op-caution svg {
+  width: 15px;
+  height: 15px;
+}
+
+.poster--official.poster--story .op-prevention {
+  padding: 22px 24px 20px;
+  border-radius: 13px;
+}
+
+.poster--official.poster--story .op-prevention h3 {
+  gap: 9px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  line-height: 1.36;
+}
+
+.poster--official.poster--story .op-prevention h3 svg {
+  width: 18px;
+  height: 18px;
+}
+
+.poster--official.poster--story .op-prevention__list {
+  gap: 10px;
+}
+
+.poster--official.poster--story .op-prevention__list li {
+  gap: 9px;
+  font-size: 15.6px;
+  line-height: 1.45;
+}
+
+.poster--official.poster--story .op-check {
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+}
+
+.poster--official.poster--story .op-check svg {
+  width: 9px;
+  height: 9px;
+}
+
+.poster--official.poster--story .op-callout {
+  gap: 14px;
+  margin-top: 14px;
+  padding: 13px 50px 13px 18px;
+  border-left-width: 5px;
+  border-radius: 9px;
+}
+
+.poster--official.poster--story .op-callout > svg:first-child {
+  width: 23px;
+  height: 23px;
+}
+
+.poster--official.poster--story .op-callout p {
+  font-size: 15px;
+}
+
+.poster--official.poster--story .op-callout__shield {
+  right: 18px;
+  width: 24px;
+  height: 24px;
+}
+
+.poster--official.poster--story .op-footer {
+  height: auto;
+  padding: 26px 62px 24px;
+  gap: 15px;
+}
+
+.poster--official.poster--story .op-footer__top {
+  padding-bottom: 17px;
+}
+
+.poster--official.poster--story .poster-values__label {
+  font-size: 9.5px;
+}
+
+.poster--official.poster--story .poster-values__list {
+  font-size: 9.5px;
+}
+
+.poster--official.poster--story .op-footer__motto {
+  font-size: 25px;
+}
+
+.poster--official.poster--story .poster-contacts span {
+  font-size: 12px;
+}
+
+.poster--official.poster--story .poster-contacts svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--official.poster--story .op-footer__bottom {
+  padding-top: 13px;
+}
+
+.poster--official.poster--story .op-footer__disclaimer {
+  max-width: 790px;
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+.poster--official.poster--story .op-footer__signoff {
+  font-size: 9px;
+}
+
+/* =========================================================
+   TEMPLATE A — OFFICIAL LANDSCAPE
+   ========================================================= */
+
+.poster--official.poster--landscape {
+  --poster-name-size: 52px;
+}
+
+.poster--official.poster--landscape .poster-wordmark {
+  gap: 11px;
+}
+
+.poster--official.poster--landscape .poster-wordmark__mark {
+  height: 43px;
+}
+
+.poster--official.poster--landscape .poster-wordmark__copy {
+  gap: 2px;
+}
+
+.poster--official.poster--landscape .poster-wordmark__copy span {
+  font-size: 7.2px;
+}
+
+.poster--official.poster--landscape .poster-wordmark__copy strong {
+  font-size: 12px;
+}
+
+.poster--official.poster--landscape .op-l-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  flex-shrink: 0;
+  height: 68px;
+  padding: 0 40px;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(73, 147, 226, 0.24), transparent 33%),
+    linear-gradient(100deg, #032249, #063a78 60%, #0755a5);
+  color: #ffffff;
+}
+
+.poster--official.poster--landscape .op-l-alert {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-left: auto;
+  padding: 9px 15px;
+  border-radius: 6px;
+  background: #c8202f;
+  color: #ffffff;
+}
+
+.poster--official.poster--landscape .op-l-alert svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.3;
+}
+
+.poster--official.poster--landscape .op-l-alert strong {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.poster--official.poster--landscape .op-l-header__tag {
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 7.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.poster--official.poster--landscape .op-l-hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 30px;
+  flex-shrink: 0;
+  height: 176px;
+  overflow: hidden;
+  padding: 16px 40px 14px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(7, 85, 165, 0.09), transparent 37%),
+    linear-gradient(150deg, #f9fcff, #eaf5ff);
+}
+
+.poster--official.poster--landscape .op-l-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.poster--official.poster--landscape .op-l-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 4px;
+  color: #0755a5;
+  font-size: 8.8px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.poster--official.poster--landscape .op-l-eyebrow::before {
+  content: '';
+  width: 13px;
+  height: 2px;
+  background: #c8202f;
+}
+
+.poster--official.poster--landscape .poster-name {
+  color: #063a78;
+}
+
+.poster--official.poster--landscape .op-l-role {
+  margin-top: 3px;
+  color: #4b6177;
+  font-size: 11.5px;
+  font-weight: 550;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.poster--official.poster--landscape .op-l-quote {
+  max-width: 790px;
+  margin-top: 6px;
+  color: #3c536a;
+  font-size: 13.2px;
+  font-weight: 500;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.poster--official.poster--landscape .poster-meta {
+  margin-top: 5px;
+  gap: 4px 12px;
+}
+
+.poster--official.poster--landscape .poster-meta span {
+  font-size: 9.5px;
+}
+
+.poster--official.poster--landscape .poster-meta svg {
+  width: 10px;
+  height: 10px;
+}
+
+.poster--official.poster--landscape .poster-verified {
+  margin-bottom: 5px;
+  padding: 4px 8px 4px 7px;
+  gap: 6px;
+  border-left-width: 2px;
+}
+
+.poster--official.poster--landscape .poster-verified > svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--official.poster--landscape .poster-verified__label {
+  display: none;
+}
+
+.poster--official.poster--landscape .poster-verified strong {
+  font-size: 8.5px;
+}
+
+.poster--official.poster--landscape .poster-verified__source {
+  font-size: 7px;
+}
+
+.poster--official.poster--landscape .op-l-portrait {
+  position: relative;
+  align-self: center;
+  justify-self: end;
+  width: 218px;
+  height: 144px;
+  border: 4px solid #ffffff;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 0 10px 26px rgba(5, 42, 82, 0.17);
+}
+
+.poster--official.poster--landscape .op-l-portrait .poster-photo {
+  border-radius: 4px;
+}
+
+.poster--official.poster--landscape .op-l-portrait__badge {
+  position: absolute;
+  right: -7px;
+  bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #063a78;
+  color: #ffffff;
+  font-size: 6.3px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 10px rgba(4, 28, 56, 0.22);
+}
+
+.poster--official.poster--landscape .op-l-portrait__badge svg {
+  width: 11px;
+  height: 11px;
+  color: #9bd0ff;
+}
+
+.poster--official.poster--landscape .op-l-health {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.04fr 1fr 1.18fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'head facts prevent'
+    'callout callout callout';
+  gap: 9px 22px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 13px 40px 14px;
+  background: #ffffff;
+}
+
+.poster--official.poster--landscape .op-l-health__head {
+  grid-area: head;
+  align-self: center;
+  min-width: 0;
+}
+
+.poster--official.poster--landscape .op-l-health__head > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #0755a5;
+  font-size: 8.8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.poster--official.poster--landscape .op-l-health__head > span svg {
+  width: 12px;
+  height: 12px;
+}
+
+.poster--official.poster--landscape .op-l-health__head h2 {
+  margin-top: 4px;
+  color: #063a78;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 25px;
+  font-weight: 760;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.poster--official.poster--landscape .op-l-health__head p {
+  margin-top: 7px;
+  color: #516679;
+  font-size: 11.8px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.poster--official.poster--landscape .op-l-health__col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 10px 13px;
+  border-radius: 7px;
+  background: #f7fbff;
+  border: 1px solid #e2edf7;
+}
+
+.poster--official.poster--landscape .op-l-health__col h3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 7px;
+  color: #063a78;
+  font-size: 11.2px;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  line-height: 1.3;
+}
+
+.poster--official.poster--landscape .op-l-health__col h3 svg {
+  width: 12px;
+  height: 12px;
+  margin-top: 1px;
+  color: #0755a5;
+}
+
+.poster--official.poster--landscape .op-l-symptoms {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2px;
+}
+
+.poster--official.poster--landscape .op-l-symptoms li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #3d5267;
+  font-size: 11.8px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.poster--official.poster--landscape .op-l-symptoms li > span {
+  width: 4px;
+  height: 4px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #0755a5;
+  flex-shrink: 0;
+}
+
+.poster--official.poster--landscape .op-l-caution {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 5px;
+  color: #75889a;
+  font-size: 9.5px;
+  font-style: italic;
+  line-height: 1.38;
+}
+
+.poster--official.poster--landscape .op-l-caution svg {
+  width: 10px;
+  height: 10px;
+  margin-top: 1px;
+  color: #0755a5;
+}
+
+.poster--official.poster--landscape .op-l-health__col--prevention {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(71, 152, 235, 0.25), transparent 40%),
+    #063a78;
+  border-color: #063a78;
+}
+
+.poster--official.poster--landscape .op-l-health__col--prevention h3 {
+  color: #ffffff;
+}
+
+.poster--official.poster--landscape .op-l-health__col--prevention h3 svg {
+  color: #91ccff;
+}
+
+.poster--official.poster--landscape .op-l-prevention {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2px;
+}
+
+.poster--official.poster--landscape .op-l-prevention li {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  color: rgba(235, 247, 255, 0.84);
+  font-size: 11.2px;
+  font-weight: 500;
+  line-height: 1.32;
+}
+
+.poster--official.poster--landscape .op-l-prevention svg {
+  width: 10px;
+  height: 10px;
+  margin-top: 1px;
+  color: #9dd4ff;
+  stroke-width: 3;
+}
+
+.poster--official.poster--landscape .op-l-callout {
+  grid-area: callout;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-left: 3px solid #c8202f;
+  border-radius: 5px;
+  background: #fff4f5;
+  color: #8c1823;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.35;
+}
+
+.poster--official.poster--landscape .op-l-callout svg {
+  width: 14px;
+  height: 14px;
+  color: #c8202f;
+}
+
+.poster--official.poster--landscape .op-l-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+  height: 74px;
+  overflow: hidden;
+  padding: 0 40px;
+  background: linear-gradient(100deg, #042447, #063a78);
+  color: #ffffff;
+}
+
+.poster--official.poster--landscape .op-l-footer .poster-values {
+  flex-shrink: 0;
+}
+
+.poster--official.poster--landscape .poster-values__label {
+  font-size: 7.8px;
+}
+
+.poster--official.poster--landscape .poster-values__list {
+  font-size: 7.8px;
+}
+
+.poster--official.poster--landscape .op-l-footer__motto {
+  flex-shrink: 0;
+  color: #d9efff;
+  font-size: 16px;
+}
+
+.poster--official.poster--landscape .op-l-footer__disclaimer {
+  max-width: 320px;
+  margin-left: auto;
+  color: rgba(225, 240, 255, 0.42);
+  font-size: 7.8px;
+  line-height: 1.45;
+}
+
+.poster--official.poster--landscape .poster-contacts {
+  max-width: 250px;
+  gap: 3px 10px;
+}
+
+.poster--official.poster--landscape .poster-contacts span {
+  font-size: 8.5px;
+}
+
+.poster--official.poster--landscape .poster-contacts svg {
+  width: 8px;
+  height: 8px;
+}
+
+/* =========================================================
+   TEMPLATE B — MODERN AWARENESS
+   ========================================================= */
+
+.poster--modern {
+  background: #041e45;
+  color: #ffffff;
+}
+
+.poster--modern .mo-geometry {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.poster--modern .mo-geometry__disc {
+  position: absolute;
+  top: -190px;
+  right: -180px;
+  width: 570px;
+  height: 570px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(48, 135, 226, 0.3), rgba(48, 135, 226, 0) 68%);
+}
+
+.poster--modern .mo-geometry__arc {
+  position: absolute;
+  top: 56px;
+  right: -140px;
+  width: 450px;
+  height: 450px;
+  border: 1px solid rgba(138, 201, 255, 0.16);
+  border-radius: 50%;
+}
+
+.poster--modern .mo-geometry__grid {
+  position: absolute;
+  left: 0;
+  bottom: 195px;
+  width: 340px;
+  height: 270px;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(135deg, #000, transparent 80%);
+}
+
+.poster--modern .mo-geometry__cross {
+  position: absolute;
+  top: 250px;
+  right: 45px;
+  width: 92px;
+  height: 92px;
+  opacity: 0.05;
+}
+
+.poster--modern .mo-geometry__cross::before,
+.poster--modern .mo-geometry__cross::after {
+  content: '';
+  position: absolute;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.poster--modern .mo-geometry__cross::before {
+  left: 34px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+}
+
+.poster--modern .mo-geometry__cross::after {
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 24px;
+}
+
+.poster--modern .mo-header,
+.poster--modern .mo-alert,
+.poster--modern .mo-hero,
+.poster--modern .mo-health,
+.poster--modern .mo-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Modern header */
+
+.poster--modern .mo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-shrink: 0;
+  padding: 0 54px;
+  background: transparent;
+}
+
+.poster--modern .mo-header__series {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  padding-left: 17px;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  line-height: 1.3;
+  text-align: right;
+}
+
+.poster--modern .mo-header__series span {
+  color: rgba(220, 239, 255, 0.42);
+  font-size: 7.5px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.poster--modern .mo-header__series strong {
+  color: #a7d5ff;
+  font-size: 8.8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Modern alert */
+
+.poster--modern .mo-alert {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  padding: 0 54px;
+  background: linear-gradient(90deg, #b81826, #c8202f 58%, #9e1420);
+  color: #ffffff;
+}
+
+.poster--modern .mo-alert > svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2.3;
+}
+
+.poster--modern .mo-alert strong {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 15.5px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.poster--modern .mo-alert > span {
+  margin-left: auto;
+  padding-left: 16px;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 7.6px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+/* Modern hero */
+
+.poster--modern .mo-hero {
+  display: grid;
+  grid-template-columns: 316px minmax(0, 1fr);
+  gap: 38px;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 26px 54px 30px;
+  background: transparent;
+}
+
+.poster--modern .mo-portrait-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.poster--modern .mo-portrait-block__accent {
+  position: absolute;
+  top: 18px;
+  left: 19px;
+  width: 268px;
+  height: 318px;
+  border: 1px solid rgba(126, 195, 255, 0.32);
+  border-radius: 26px 26px 138px 26px;
+}
+
+.poster--modern .mo-portrait-block__frame {
+  position: relative;
+  z-index: 1;
+  width: 286px;
+  height: 326px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px 24px 140px 24px;
+  background: #123966;
+  box-shadow: 0 20px 46px rgba(0, 8, 22, 0.35);
+}
+
+.poster--modern .mo-portrait-block__tag {
+  position: absolute;
+  left: -8px;
+  bottom: 25px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  background: #eaf4ff;
+  color: #063a78;
+  font-size: 7.2px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 8px 18px rgba(0, 9, 24, 0.3);
+  white-space: nowrap;
+}
+
+.poster--modern .mo-portrait-block__tag svg {
+  width: 13px;
+  height: 13px;
+  color: #0755a5;
+}
+
+.poster--modern .mo-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.poster--modern .mo-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+  color: #94cdff;
+  font-size: 8.8px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+}
+
+.poster--modern .mo-eyebrow svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 2.1;
+}
+
+.poster--modern .poster-name {
+  color: #ffffff;
+}
+
+.poster--modern .mo-role {
+  margin-top: 8px;
+  color: rgba(219, 238, 255, 0.66);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.poster--modern .mo-quote {
+  max-width: 580px;
+  margin-top: 13px;
+  color: rgba(237, 247, 255, 0.84);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.008em;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.poster--modern .mo-quote--long {
+  font-size: 16px;
+  line-height: 1.48;
+}
+
+.poster--modern .mo-hero .poster-meta {
+  margin-top: 12px;
+}
+
+.poster--modern .mo-hero .poster-verified {
+  margin-bottom: 10px;
+  border-left-color: #ff8792;
+  background: rgba(255, 255, 255, 0.075);
+  color: #ffffff;
+}
+
+.poster--modern .mo-hero .poster-verified > svg {
+  color: #ff9aa3;
+}
+
+.poster--modern .mo-hero .poster-verified__label {
+  color: #ff9aa3;
+}
+
+.poster--modern .mo-hero .poster-verified__source {
+  color: rgba(230, 243, 255, 0.48);
+}
+
+.poster--modern .mo-member-strip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 15px;
+  color: #83c7ff;
+  font-size: 7.4px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.poster--modern .mo-member-strip i {
+  width: 22px;
+  height: 1px;
+  background: rgba(131, 199, 255, 0.42);
+}
+
+/* Modern health */
+
+.poster--modern .mo-health {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 19px 54px 20px;
+  background:
+    radial-gradient(circle at 0% 100%, rgba(7, 85, 165, 0.07), transparent 28%),
+    #eaf4ff;
+  color: #17243a;
+}
+
+.poster--modern .mo-health__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-shrink: 0;
+  padding-bottom: 9px;
+}
+
+.poster--modern .mo-health__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0755a5;
+  font-size: 8.4px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+}
+
+.poster--modern .mo-health__eyebrow svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 2.3;
+}
+
+.poster--modern .mo-health__head h2 {
+  margin-top: 4px;
+  color: #041e45;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 31px;
+  font-weight: 770;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.poster--modern .mo-health__stamp {
+  padding-bottom: 2px;
+  color: #8198ad;
+  font-size: 7.8px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.poster--modern .mo-health__cards {
+  display: grid;
+  grid-template-columns: 1.07fr 0.93fr;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+  margin-top: 8px;
+}
+
+.poster--modern .mo-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding: 14px 16px 13px;
+  border-radius: 12px;
+}
+
+.poster--modern .mo-card--facts {
+  border: 1px solid #d6e6f5;
+  background: #ffffff;
+  box-shadow: 0 5px 16px rgba(9, 53, 98, 0.05);
+}
+
+.poster--modern .mo-card__intro {
+  color: #40566b;
+  font-size: 15.4px;
+  font-weight: 500;
+  line-height: 1.46;
+}
+
+.poster--modern .mo-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 5px;
+  color: #063a78;
+  font-size: 13.7px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.poster--modern .mo-card h3 svg {
+  width: 14px;
+  height: 14px;
+  color: #0755a5;
+}
+
+.poster--modern .mo-symptoms {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3px;
+}
+
+.poster--modern .mo-symptoms li {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  color: #364d63;
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 1.32;
+}
+
+.poster--modern .mo-symptoms li > span {
+  width: 5px;
+  height: 5px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: #2c82d9;
+  flex-shrink: 0;
+}
+
+.poster--modern .mo-caution {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 0;
+  padding-top: 9px;
+  color: #6b8194;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.42;
+}
+
+.poster--modern .mo-caution svg {
+  width: 11px;
+  height: 11px;
+  margin-top: 1px;
+  color: #0755a5;
+}
+
+.poster--modern .mo-card--prevention {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(52, 139, 227, 0.3), transparent 42%),
+    linear-gradient(155deg, #063b77, #041e45);
+  color: #ffffff;
+}
+
+.poster--modern .mo-card--prevention h3 {
+  margin: 1px 0 9px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.34;
+}
+
+.poster--modern .mo-prevention {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.poster--modern .mo-prevention li {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  color: rgba(235, 247, 255, 0.85);
+  font-size: 12.9px;
+  font-weight: 500;
+  line-height: 1.34;
+}
+
+.poster--modern .mo-prevention li > span {
+  display: grid;
+  place-items: center;
+  width: 13px;
+  height: 13px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(120, 190, 255, 0.17);
+  color: #bde3ff;
+  flex-shrink: 0;
+}
+
+.poster--modern .mo-prevention li > span svg {
+  width: 8px;
+  height: 8px;
+  stroke-width: 3;
+}
+
+.poster--modern .mo-callout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-top: 10px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #a81623, #c8202f);
+  color: #ffffff;
+}
+
+.poster--modern .mo-callout__icon {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.poster--modern .mo-callout__icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--modern .mo-callout p {
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 11.4px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+/* Modern footer */
+
+.poster--modern .mo-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 14px 54px 13px;
+  background:
+    radial-gradient(circle at 100% 100%, rgba(46, 125, 207, 0.18), transparent 36%),
+    #031b3c;
+}
+
+.poster--modern .mo-footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.poster--modern .mo-footer__motto {
+  color: #d3ecff;
+}
+
+.poster--modern .mo-footer__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 22px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.poster--modern .mo-footer__disclaimer {
+  max-width: 720px;
+  color: rgba(225, 240, 255, 0.42);
+}
+
+.poster--modern .mo-footer__bottom > span {
+  flex-shrink: 0;
+  color: #79bdfa;
+  font-size: 7.6px;
+  font-weight: 800;
+  letter-spacing: 0.115em;
+  white-space: nowrap;
+}
+
+/* Modern — portrait rows */
+
+.poster--modern.poster--portrait {
+  --poster-name-size: 60px;
+}
+
+.poster--modern.poster--portrait .mo-header {
+  height: 96px;
+}
+
+.poster--modern.poster--portrait .mo-alert {
+  height: 56px;
+}
+
+.poster--modern.poster--portrait .mo-hero {
+  height: 448px;
+}
+
+.poster--modern.poster--portrait .mo-footer {
+  height: auto;
+  padding: 18px 54px 16px;
+}
+
+/* Modern — story rows */
+
+.poster--modern.poster--story {
+  --poster-name-size: 72px;
+}
+
+.poster--modern.poster--story .mo-header {
+  height: 116px;
+  padding-inline: 62px;
+}
+
+.poster--modern.poster--story .poster-wordmark {
+  gap: 15px;
+}
+
+.poster--modern.poster--story .poster-wordmark__mark {
+  height: 67px;
+}
+
+.poster--modern.poster--story .poster-wordmark__copy span {
+  font-size: 10px;
+}
+
+.poster--modern.poster--story .poster-wordmark__copy strong {
+  font-size: 17px;
+}
+
+.poster--modern.poster--story .mo-header__series span {
+  font-size: 8.8px;
+}
+
+.poster--modern.poster--story .mo-header__series strong {
+  font-size: 10.5px;
+}
+
+.poster--modern.poster--story .mo-alert {
+  height: 68px;
+  padding-inline: 62px;
+  gap: 14px;
+}
+
+.poster--modern.poster--story .mo-alert strong {
+  font-size: 19px;
+}
+
+.poster--modern.poster--story .mo-alert > svg {
+  width: 21px;
+  height: 21px;
+}
+
+.poster--modern.poster--story .mo-alert > span {
+  font-size: 9px;
+}
+
+.poster--modern.poster--story .mo-hero {
+  height: 620px;
+  grid-template-columns: 390px minmax(0, 1fr);
+  gap: 48px;
+  padding: 38px 62px 38px;
+}
+
+.poster--modern.poster--story .mo-portrait-block__accent {
+  top: 20px;
+  left: 23px;
+  width: 326px;
+  height: 440px;
+  border-radius: 30px 30px 168px 30px;
+}
+
+.poster--modern.poster--story .mo-portrait-block__frame {
+  width: 350px;
+  height: 452px;
+  border-radius: 28px 28px 174px 28px;
+}
+
+.poster--modern.poster--story .mo-portrait-block__tag {
+  left: -10px;
+  bottom: 24px;
+  padding: 9px 13px;
+  font-size: 8.8px;
+}
+
+.poster--modern.poster--story .mo-eyebrow {
+  margin-bottom: 14px;
+  font-size: 10.5px;
+}
+
+.poster--modern.poster--story .mo-role {
+  margin-top: 12px;
+  font-size: 17.5px;
+}
+
+.poster--modern.poster--story .mo-quote {
+  margin-top: 19px;
+  font-size: 23px;
+  line-height: 1.55;
+}
+
+.poster--modern.poster--story .mo-quote--long {
+  font-size: 20px;
+}
+
+.poster--modern.poster--story .mo-hero .poster-meta {
+  margin-top: 17px;
+  gap: 7px 19px;
+}
+
+.poster--modern.poster--story .mo-hero .poster-meta span {
+  font-size: 12px;
+}
+
+.poster--modern.poster--story .mo-member-strip {
+  margin-top: 22px;
+  font-size: 8.7px;
+}
+
+.poster--modern.poster--story .poster-verified {
+  margin-bottom: 15px;
+  padding: 9px 13px 9px 11px;
+}
+
+.poster--modern.poster--story .poster-verified strong {
+  font-size: 12px;
+}
+
+.poster--modern.poster--story .poster-verified__source {
+  font-size: 9px;
+}
+
+.poster--modern.poster--story .mo-health {
+  padding: 28px 62px 29px;
+}
+
+.poster--modern.poster--story .mo-health__head {
+  padding-bottom: 14px;
+}
+
+.poster--modern.poster--story .mo-health__eyebrow {
+  font-size: 10px;
+}
+
+.poster--modern.poster--story .mo-health__head h2 {
+  margin-top: 6px;
+  font-size: 40px;
+}
+
+.poster--modern.poster--story .mo-health__stamp {
+  font-size: 9px;
+}
+
+.poster--modern.poster--story .mo-health__cards {
+  gap: 17px;
+  margin-top: 13px;
+}
+
+.poster--modern.poster--story .mo-card {
+  padding: 22px 24px 20px;
+  border-radius: 15px;
+}
+
+.poster--modern.poster--story .mo-card__intro {
+  font-size: 17.4px;
+  line-height: 1.55;
+}
+
+.poster--modern.poster--story .mo-card h3 {
+  gap: 8px;
+  margin: 17px 0 10px;
+  font-size: 15.3px;
+}
+
+.poster--modern.poster--story .mo-card h3 svg {
+  width: 17px;
+  height: 17px;
+}
+
+.poster--modern.poster--story .mo-symptoms {
+  gap: 8px;
+}
+
+.poster--modern.poster--story .mo-symptoms li {
+  gap: 9px;
+  font-size: 16.8px;
+  line-height: 1.4;
+}
+
+.poster--modern.poster--story .mo-symptoms li > span {
+  width: 6px;
+  height: 6px;
+  margin-top: 8px;
+}
+
+.poster--modern.poster--story .mo-caution {
+  padding-top: 12px;
+  font-size: 13.2px;
+  line-height: 1.48;
+}
+
+.poster--modern.poster--story .mo-caution svg {
+  width: 14px;
+  height: 14px;
+}
+
+.poster--modern.poster--story .mo-card--prevention h3 {
+  margin: 1px 0 16px;
+  font-size: 16px;
+  line-height: 1.38;
+}
+
+.poster--modern.poster--story .mo-prevention {
+  gap: 10px;
+}
+
+.poster--modern.poster--story .mo-prevention li {
+  gap: 9px;
+  font-size: 14.4px;
+  line-height: 1.43;
+}
+
+.poster--modern.poster--story .mo-prevention li > span {
+  width: 16px;
+  height: 16px;
+}
+
+.poster--modern.poster--story .mo-prevention li > span svg {
+  width: 9px;
+  height: 9px;
+}
+
+.poster--modern.poster--story .mo-callout {
+  gap: 13px;
+  margin-top: 14px;
+  padding: 13px 18px;
+  border-radius: 10px;
+}
+
+.poster--modern.poster--story .mo-callout__icon {
+  width: 31px;
+  height: 31px;
+}
+
+.poster--modern.poster--story .mo-callout__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.poster--modern.poster--story .mo-callout p {
+  font-size: 13.8px;
+}
+
+.poster--modern.poster--story .mo-footer {
+  height: auto;
+  padding: 26px 62px 24px;
+  gap: 15px;
+}
+
+.poster--modern.poster--story .mo-footer__top {
+  padding-bottom: 17px;
+}
+
+.poster--modern.poster--story .poster-values__label,
+.poster--modern.poster--story .poster-values__list {
+  font-size: 9.3px;
+}
+
+.poster--modern.poster--story .mo-footer__motto {
+  font-size: 25px;
+}
+
+.poster--modern.poster--story .poster-contacts span {
+  font-size: 11.5px;
+}
+
+.poster--modern.poster--story .poster-contacts svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--modern.poster--story .mo-footer__bottom {
+  padding-top: 12px;
+}
+
+.poster--modern.poster--story .mo-footer__disclaimer {
+  max-width: 790px;
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+.poster--modern.poster--story .mo-footer__bottom > span {
+  font-size: 9px;
+}
+
+/* =========================================================
+   TEMPLATE B — MODERN LANDSCAPE
+   ========================================================= */
+
+.poster--modern.poster--landscape {
+  --poster-name-size: 52px;
+}
+
+.poster--modern.poster--landscape .mo-l-geometry {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(72, 160, 246, 0.25), transparent 32%),
+    radial-gradient(circle at 92% 110%, rgba(26, 91, 161, 0.25), transparent 38%);
+}
+
+.poster--modern.poster--landscape .mo-l-geometry::before {
+  content: '';
+  position: absolute;
+  top: -210px;
+  left: 170px;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(146, 206, 255, 0.11);
+  border-radius: 50%;
+}
+
+.poster--modern.poster--landscape .mo-l-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-shrink: 0;
+  height: 66px;
+  padding: 0 40px;
+}
+
+.poster--modern.poster--landscape .poster-wordmark {
+  gap: 10px;
+}
+
+.poster--modern.poster--landscape .poster-wordmark__mark {
+  height: 40px;
+}
+
+.poster--modern.poster--landscape .poster-wordmark__copy {
+  gap: 2px;
+}
+
+.poster--modern.poster--landscape .poster-wordmark__copy span {
+  font-size: 6.9px;
+}
+
+.poster--modern.poster--landscape .poster-wordmark__copy strong {
+  font-size: 11.5px;
+}
+
+.poster--modern.poster--landscape .mo-l-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  padding: 7px 13px;
+  border-radius: 5px;
+  background: #c8202f;
+  color: #ffffff;
+}
+
+.poster--modern.poster--landscape .mo-l-alert svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--modern.poster--landscape .mo-l-alert strong {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 11.8px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.poster--modern.poster--landscape .mo-l-series {
+  padding-left: 17px;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(207, 233, 255, 0.45);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.poster--modern.poster--landscape .mo-l-hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 218px minmax(0, 1fr);
+  gap: 28px;
+  flex-shrink: 0;
+  height: 170px;
+  overflow: hidden;
+  padding: 14px 40px 12px;
+}
+
+.poster--modern.poster--landscape .mo-l-portrait {
+  position: relative;
+  align-self: center;
+  justify-self: start;
+  width: 218px;
+  height: 144px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px 14px 72px 14px;
+  background: #123966;
+}
+
+.poster--modern.poster--landscape .mo-l-portrait__tag {
+  position: absolute;
+  left: 9px;
+  bottom: 9px;
+  padding: 4px 7px;
+  border-radius: 3px;
+  background: #eaf4ff;
+  color: #063a78;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.poster--modern.poster--landscape .mo-l-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.poster--modern.poster--landscape .mo-l-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  color: #97ceff;
+  font-size: 8.8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.poster--modern.poster--landscape .mo-l-eyebrow::before {
+  content: '';
+  width: 11px;
+  height: 2px;
+  background: #c8202f;
+}
+
+.poster--modern.poster--landscape .poster-name {
+  color: #ffffff;
+}
+
+.poster--modern.poster--landscape .mo-l-role {
+  margin-top: 4px;
+  color: rgba(219, 238, 255, 0.62);
+  font-size: 11.5px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.poster--modern.poster--landscape .mo-l-quote {
+  max-width: 830px;
+  margin-top: 7px;
+  color: rgba(237, 247, 255, 0.8);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.poster--modern.poster--landscape .poster-meta {
+  margin-top: 6px;
+  gap: 4px 10px;
+}
+
+.poster--modern.poster--landscape .poster-meta span {
+  font-size: 9.5px;
+}
+
+.poster--modern.poster--landscape .poster-meta svg {
+  width: 10px;
+  height: 10px;
+}
+
+.poster--modern.poster--landscape .poster-verified {
+  margin-bottom: 6px;
+  padding: 4px 7px;
+  gap: 5px;
+  border-left-width: 2px;
+  background: rgba(255, 255, 255, 0.075);
+  color: #ffffff;
+}
+
+.poster--modern.poster--landscape .poster-verified > svg {
+  width: 12px;
+  height: 12px;
+  color: #ff9aa3;
+}
+
+.poster--modern.poster--landscape .poster-verified__label {
+  display: none;
+}
+
+.poster--modern.poster--landscape .poster-verified strong {
+  font-size: 8.5px;
+}
+
+.poster--modern.poster--landscape .poster-verified__source {
+  font-size: 7px;
+  color: rgba(230, 243, 255, 0.46);
+}
+
+.poster--modern.poster--landscape .mo-l-health {
+  display: grid;
+  grid-template-columns: 1.02fr 1fr 1.18fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'head facts prevent'
+    'callout callout callout';
+  gap: 9px 20px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 13px 40px 14px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(7, 85, 165, 0.08), transparent 35%),
+    #eaf4ff;
+  color: #17243a;
+}
+
+.poster--modern.poster--landscape .mo-l-health__head {
+  grid-area: head;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 2px 0;
+}
+
+.poster--modern.poster--landscape .mo-l-health__head::before {
+  content: '';
+  width: 32px;
+  height: 3px;
+  margin-bottom: 9px;
+  background: #c8202f;
+}
+
+.poster--modern.poster--landscape .mo-l-health__head > span {
+  display: block;
+  color: #0755a5;
+  font-size: 8.8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.poster--modern.poster--landscape .mo-l-health__head > span svg {
+  display: inline;
+  width: 11px;
+  height: 11px;
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+
+.poster--modern.poster--landscape .mo-l-health__head h2 {
+  margin-top: 4px;
+  color: #041e45;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 27px;
+  font-weight: 770;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+}
+
+.poster--modern.poster--landscape .mo-l-health__facts,
+.poster--modern.poster--landscape .mo-l-health__prevent {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 11px 13px;
+}
+
+.poster--modern.poster--landscape .mo-l-health__facts {
+  grid-area: facts;
+  border: 1px solid #d7e7f6;
+  background: #ffffff;
+}
+
+.poster--modern.poster--landscape .mo-l-health__facts > p:first-child {
+  color: #435a70;
+  font-size: 11.4px;
+  font-weight: 500;
+  line-height: 1.42;
+}
+
+.poster--modern.poster--landscape .mo-l-health__facts h3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin: 8px 0 6px;
+  color: #063a78;
+  font-size: 10.6px;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1.3;
+}
+
+.poster--modern.poster--landscape .mo-l-health__facts h3 svg {
+  width: 12px;
+  height: 12px;
+  margin-top: 1px;
+  color: #0755a5;
+}
+
+.poster--modern.poster--landscape .mo-l-health__facts ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2px;
+}
+
+.poster--modern.poster--landscape .mo-l-health__facts li {
+  color: #3a5066;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.32;
+}
+
+.poster--modern.poster--landscape .mo-l-caution {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 5px;
+  color: #778b9e;
+  font-size: 8.8px;
+  font-style: italic;
+  line-height: 1.38;
+}
+
+.poster--modern.poster--landscape .mo-l-caution svg {
+  width: 9px;
+  height: 9px;
+  margin-top: 1px;
+  color: #0755a5;
+}
+
+.poster--modern.poster--landscape .mo-l-health__prevent {
+  grid-area: prevent;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(71, 152, 235, 0.28), transparent 42%),
+    #063a78;
+  color: #ffffff;
+}
+
+.poster--modern.poster--landscape .mo-l-health__prevent h3 {
+  margin-bottom: 7px;
+  color: #ffffff;
+  font-size: 10.4px;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1.3;
+}
+
+.poster--modern.poster--landscape .mo-l-health__prevent ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2px;
+}
+
+.poster--modern.poster--landscape .mo-l-health__prevent li {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  color: rgba(235, 247, 255, 0.84);
+  font-size: 10.4px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.poster--modern.poster--landscape .mo-l-health__prevent li svg {
+  width: 9px;
+  height: 9px;
+  margin-top: 1px;
+  color: #a4d7ff;
+  stroke-width: 3;
+}
+
+.poster--modern.poster--landscape .mo-l-callout {
+  grid-area: callout;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  background: #c8202f;
+  color: #ffffff;
+  font-size: 9.8px;
+  font-weight: 750;
+  letter-spacing: 0.012em;
+  line-height: 1.3;
+}
+
+.poster--modern.poster--landscape .mo-l-callout svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--modern.poster--landscape .mo-l-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  flex-shrink: 0;
+  height: 78px;
+  min-height: 78px;
+  padding: 0 40px;
+  background: rgba(2, 16, 36, 0.72);
+}
+
+.poster--modern.poster--landscape .poster-values {
+  flex-shrink: 0;
+}
+
+.poster--modern.poster--landscape .poster-values__label,
+.poster--modern.poster--landscape .poster-values__list {
+  font-size: 7.8px;
+}
+
+.poster--modern.poster--landscape .mo-l-footer__motto {
+  flex-shrink: 0;
+  color: #d3ecff;
+  font-size: 16px;
+}
+
+.poster--modern.poster--landscape .poster-contacts {
+  max-width: 250px;
+  gap: 3px 9px;
+}
+
+.poster--modern.poster--landscape .poster-contacts span {
+  font-size: 8.5px;
+}
+
+.poster--modern.poster--landscape .poster-contacts svg {
+  width: 9px;
+  height: 9px;
+}
+
+.poster--modern.poster--landscape .mo-l-footer__disclaimer {
+  max-width: 300px;
+  margin-left: auto;
+  color: rgba(225, 240, 255, 0.4);
+  font-size: 7.8px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   TEMPLATE C — MINIMAL AWARENESS
+   ========================================================= */
+
+.poster--minimal {
+  background: #ffffff;
+  color: #17243a;
+}
+
+.poster--minimal .mn-rule {
+  flex-shrink: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #c8202f 0%, #c8202f 36%, #063a78 36%, #063a78 100%);
+}
+
+.poster--minimal .mn-header,
+.poster--minimal .mn-alert,
+.poster--minimal .mn-hero,
+.poster--minimal .mn-health,
+.poster--minimal .mn-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Minimal header */
+
+.poster--minimal .mn-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-shrink: 0;
+  padding: 0 54px;
+  border-bottom: 1px solid #e6eef6;
+  background: #ffffff;
+}
+
+.poster--minimal .mn-header__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  padding-left: 17px;
+  border-left: 1px solid #d9e4ef;
+  line-height: 1.3;
+  text-align: right;
+}
+
+.poster--minimal .mn-header__right span {
+  color: #92a2b2;
+  font-size: 7.4px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.poster--minimal .mn-header__right strong {
+  color: #063a78;
+  font-size: 8.6px;
+  font-weight: 750;
+  letter-spacing: 0.075em;
+}
+
+/* Minimal alert */
+
+.poster--minimal .mn-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 0 54px;
+  border-bottom: 1px solid #f1d9dc;
+  background: #fff6f6;
+  color: #a81a27;
+}
+
+.poster--minimal .mn-alert > svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.3;
+}
+
+.poster--minimal .mn-alert strong {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 14.2px;
+  font-weight: 740;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+}
+
+.poster--minimal .mn-alert > span {
+  margin-left: auto;
+  padding-left: 15px;
+  border-left: 1px solid #edc9cd;
+  color: #bc6069;
+  font-size: 7.3px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+/* Minimal hero */
+
+.poster--minimal .mn-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 42px;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 29px 54px 27px;
+  background:
+    radial-gradient(circle at 96% 4%, rgba(7, 85, 165, 0.05), transparent 26%),
+    #ffffff;
+}
+
+.poster--minimal .mn-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.poster--minimal .mn-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+  color: #0755a5;
+  font-size: 8.9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+}
+
+.poster--minimal .mn-eyebrow::before {
+  content: '';
+  width: 15px;
+  height: 2px;
+  background: #c8202f;
+}
+
+.poster--minimal .poster-name {
+  color: #0d2a4c;
+}
+
+.poster--minimal .mn-role {
+  margin-top: 8px;
+  color: #5a6c7e;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.poster--minimal .mn-quote {
+  max-width: 580px;
+  margin-top: 13px;
+  padding-left: 17px;
+  border-left: 2px solid #e0e9f2;
+  color: #384d62;
+  font-size: 18.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.52;
+  overflow-wrap: anywhere;
+}
+
+.poster--minimal .mn-quote--long {
+  font-size: 16.4px;
+  line-height: 1.48;
+}
+
+.poster--minimal .mn-hero .poster-meta {
+  margin-top: 12px;
+  padding-left: 19px;
+}
+
+.poster--minimal .mn-hero .poster-verified {
+  margin-bottom: 10px;
+  background: #f7fafc;
+  border-left-color: #c8202f;
+  color: #623b42;
+}
+
+.poster--minimal .mn-hero__rule {
+  width: 100%;
+  height: 1px;
+  margin: 13px 0 10px;
+  background: #e6eef6;
+}
+
+.poster--minimal .mn-hero__signature {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #8194a7;
+  font-size: 7.6px;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+}
+
+.poster--minimal .mn-hero__signature svg {
+  width: 13px;
+  height: 13px;
+  color: #0755a5;
+}
+
+.poster--minimal .mn-portrait {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.poster--minimal .mn-portrait__accent {
+  position: absolute;
+  top: 16px;
+  right: 8px;
+  width: 280px;
+  height: 344px;
+  border: 1px solid #d6e4f1;
+  border-radius: 2px;
+}
+
+.poster--minimal .mn-portrait__accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 3px;
+  background: #c8202f;
+}
+
+.poster--minimal .mn-portrait__frame {
+  position: relative;
+  z-index: 1;
+  width: 280px;
+  height: 344px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #e8f1fa;
+}
+
+.poster--minimal .mn-portrait__caption {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-self: flex-end;
+  margin-top: 11px;
+  padding-right: 4px;
+  color: #8a9cae;
+  font-size: 7.3px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.poster--minimal .mn-portrait__caption strong {
+  color: #063a78;
+  font-size: 8.8px;
+  font-weight: 800;
+  letter-spacing: 0.075em;
+}
+
+/* Minimal health */
+
+.poster--minimal .mn-health {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 20px 54px 21px;
+  border-top: 1px solid #e6eef6;
+  background:
+    radial-gradient(circle at 100% 100%, rgba(7, 85, 165, 0.045), transparent 32%),
+    #f7fafc;
+}
+
+.poster--minimal .mn-health__head {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex-shrink: 0;
+  padding-bottom: 9px;
+}
+
+.poster--minimal .mn-health__eyebrow {
+  display: none;
+}
+
+.poster--minimal .mn-health__head h2 {
+  color: #0d2a4c;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 31px;
+  font-weight: 760;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.poster--minimal .mn-health__head p {
+  margin-left: auto;
+  padding-bottom: 2px;
+  color: #8b9dae;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.poster--minimal .mn-health__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  margin-top: 8px;
+  border-top: 1px solid #dfe9f3;
+}
+
+.poster--minimal .mn-facts,
+.poster--minimal .mn-prevention {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding-top: 13px;
+}
+
+.poster--minimal .mn-facts {
+  padding-right: 25px;
+  border-right: 1px solid #dfe9f3;
+}
+
+.poster--minimal .mn-prevention {
+  padding-left: 25px;
+}
+
+.poster--minimal .mn-intro {
+  color: #465c71;
+  font-size: 15.6px;
+  font-weight: 500;
+  line-height: 1.48;
+}
+
+.poster--minimal .mn-facts h3,
+.poster--minimal .mn-prevention h3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 10px 0 6px;
+  color: #0d2a4c;
+  font-size: 13.6px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.32;
+}
+
+.poster--minimal .mn-facts h3 > span,
+.poster--minimal .mn-prevention h3 > span {
+  color: #c8202f;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+.poster--minimal .mn-symptoms {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 4px;
+}
+
+.poster--minimal .mn-symptoms li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #3b5166;
+  font-size: 15.2px;
+  font-weight: 550;
+  line-height: 1.34;
+}
+
+.poster--minimal .mn-symptoms li > span {
+  width: 11px;
+  height: 1px;
+  margin-top: 9px;
+  background: #0755a5;
+  flex-shrink: 0;
+}
+
+.poster--minimal .mn-caution {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 0;
+  padding-top: 10px;
+  color: #778b9e;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.42;
+}
+
+.poster--minimal .mn-caution svg {
+  width: 11px;
+  height: 11px;
+  margin-top: 1px;
+  color: #0755a5;
+}
+
+.poster--minimal .mn-prevention__list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.poster--minimal .mn-prevention__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #3b5166;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.38;
+}
+
+.poster--minimal .mn-prevention__list li > span {
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  border: 1px solid #cfe0ef;
+  border-radius: 50%;
+  color: #0755a5;
+  flex-shrink: 0;
+}
+
+.poster--minimal .mn-prevention__list li > span svg {
+  width: 8px;
+  height: 8px;
+  stroke-width: 3;
+}
+
+.poster--minimal .mn-callout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-top: 11px;
+  padding: 9px 46px 9px 12px;
+  border: 1px solid #efd3d6;
+  border-left: 4px solid #c8202f;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.poster--minimal .mn-callout > span {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff1f2;
+  color: #c8202f;
+  flex-shrink: 0;
+}
+
+.poster--minimal .mn-callout > span svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--minimal .mn-callout p {
+  flex: 1;
+  color: #8f1b26;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.018em;
+  line-height: 1.4;
+}
+
+.poster--minimal .mn-callout__icon {
+  position: absolute;
+  right: 15px;
+  width: 19px;
+  height: 19px;
+  color: rgba(200, 32, 47, 0.22);
+}
+
+/* Minimal footer */
+
+.poster--minimal .mn-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 13px 54px 12px;
+  border-top: 2px solid #0d2a4c;
+  background: #ffffff;
+}
+
+.poster--minimal .mn-footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #e6eef6;
+}
+
+.poster--minimal .mn-footer__motto {
+  color: #0d2a4c;
+}
+
+.poster--minimal .mn-footer__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 22px;
+  padding-top: 7px;
+  border-top: 1px solid #e6eef6;
+}
+
+.poster--minimal .mn-footer__disclaimer {
+  max-width: 720px;
+  color: #8b9cac;
+}
+
+.poster--minimal .mn-footer__bottom > span {
+  flex-shrink: 0;
+  color: #0755a5;
+  font-size: 7.4px;
+  font-weight: 800;
+  letter-spacing: 0.115em;
+  white-space: nowrap;
+}
+
+/* Minimal — portrait rows */
+
+.poster--minimal.poster--portrait {
+  --poster-name-size: 64px;
+}
+
+.poster--minimal.poster--portrait .mn-rule {
+  height: 8px;
+}
+
+.poster--minimal.poster--portrait .mn-header {
+  height: 84px;
+}
+
+.poster--minimal.poster--portrait .mn-alert {
+  height: 54px;
+}
+
+.poster--minimal.poster--portrait .mn-hero {
+  height: 450px;
+}
+
+.poster--minimal.poster--portrait .mn-footer {
+  height: auto;
+  padding: 17px 54px 15px;
+}
+
+/* Minimal — story rows */
+
+.poster--minimal.poster--story {
+  --poster-name-size: 78px;
+}
+
+.poster--minimal.poster--story .mn-rule {
+  height: 10px;
+}
+
+.poster--minimal.poster--story .mn-header {
+  height: 102px;
+  padding-inline: 62px;
+}
+
+.poster--minimal.poster--story .poster-wordmark {
+  gap: 15px;
+}
+
+.poster--minimal.poster--story .poster-wordmark__mark {
+  height: 67px;
+}
+
+.poster--minimal.poster--story .poster-wordmark__copy span {
+  font-size: 10px;
+}
+
+.poster--minimal.poster--story .poster-wordmark__copy strong {
+  font-size: 17px;
+}
+
+.poster--minimal.poster--story .mn-header__right span {
+  font-size: 8.7px;
+}
+
+.poster--minimal.poster--story .mn-header__right strong {
+  font-size: 10.2px;
+}
+
+.poster--minimal.poster--story .mn-alert {
+  height: 62px;
+  padding-inline: 62px;
+  gap: 13px;
+}
+
+.poster--minimal.poster--story .mn-alert > svg {
+  width: 18px;
+  height: 18px;
+}
+
+.poster--minimal.poster--story .mn-alert strong {
+  font-size: 17px;
+}
+
+.poster--minimal.poster--story .mn-alert > span {
+  font-size: 8.6px;
+}
+
+.poster--minimal.poster--story .mn-hero {
+  height: 590px;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 50px;
+  padding: 40px 62px 37px;
+}
+
+.poster--minimal.poster--story .mn-eyebrow {
+  margin-bottom: 14px;
+  font-size: 10.5px;
+}
+
+.poster--minimal.poster--story .mn-role {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.poster--minimal.poster--story .mn-quote {
+  margin-top: 20px;
+  padding-left: 22px;
+  font-size: 23px;
+  line-height: 1.55;
+}
+
+.poster--minimal.poster--story .mn-quote--long {
+  font-size: 20px;
+}
+
+.poster--minimal.poster--story .mn-hero .poster-meta {
+  margin-top: 17px;
+  padding-left: 24px;
+  gap: 7px 19px;
+}
+
+.poster--minimal.poster--story .mn-hero .poster-meta span {
+  font-size: 12px;
+}
+
+.poster--minimal.poster--story .mn-hero__rule {
+  margin: 24px 0 17px;
+}
+
+.poster--minimal.poster--story .mn-hero__signature {
+  font-size: 8.8px;
+}
+
+.poster--minimal.poster--story .poster-verified {
+  margin-bottom: 15px;
+  padding: 9px 13px 9px 11px;
+}
+
+.poster--minimal.poster--story .poster-verified strong {
+  font-size: 12px;
+}
+
+.poster--minimal.poster--story .poster-verified__source {
+  font-size: 9px;
+}
+
+.poster--minimal.poster--story .mn-portrait__accent {
+  top: 20px;
+  right: 12px;
+  width: 344px;
+  height: 462px;
+}
+
+.poster--minimal.poster--story .mn-portrait__accent::before {
+  width: 55px;
+  height: 4px;
+}
+
+.poster--minimal.poster--story .mn-portrait__frame {
+  width: 344px;
+  height: 462px;
+}
+
+.poster--minimal.poster--story .mn-portrait__caption {
+  margin-top: 14px;
+  font-size: 8.8px;
+}
+
+.poster--minimal.poster--story .mn-portrait__caption strong {
+  font-size: 10.5px;
+}
+
+.poster--minimal.poster--story .mn-health {
+  padding: 29px 62px 28px;
+}
+
+.poster--minimal.poster--story .mn-health__head {
+  padding-bottom: 14px;
+}
+
+.poster--minimal.poster--story .mn-health__head h2 {
+  font-size: 40px;
+}
+
+.poster--minimal.poster--story .mn-health__head p {
+  font-size: 9px;
+}
+
+.poster--minimal.poster--story .mn-health__columns {
+  margin-top: 14px;
+}
+
+.poster--minimal.poster--story .mn-facts,
+.poster--minimal.poster--story .mn-prevention {
+  padding-top: 20px;
+}
+
+.poster--minimal.poster--story .mn-facts {
+  padding-right: 35px;
+}
+
+.poster--minimal.poster--story .mn-prevention {
+  padding-left: 35px;
+}
+
+.poster--minimal.poster--story .mn-intro {
+  font-size: 17.7px;
+  line-height: 1.54;
+}
+
+.poster--minimal.poster--story .mn-facts h3,
+.poster--minimal.poster--story .mn-prevention h3 {
+  gap: 9px;
+  margin: 17px 0 11px;
+  font-size: 15.2px;
+}
+
+.poster--minimal.poster--story .mn-facts h3 > span,
+.poster--minimal.poster--story .mn-prevention h3 > span {
+  font-size: 9px;
+}
+
+.poster--minimal.poster--story .mn-symptoms {
+  gap: 8px;
+}
+
+.poster--minimal.poster--story .mn-symptoms li {
+  gap: 10px;
+  font-size: 17.2px;
+  line-height: 1.4;
+}
+
+.poster--minimal.poster--story .mn-symptoms li > span {
+  width: 13px;
+  margin-top: 11px;
+}
+
+.poster--minimal.poster--story .mn-caution {
+  gap: 8px;
+  padding-top: 12px;
+  font-size: 13.2px;
+  line-height: 1.48;
+}
+
+.poster--minimal.poster--story .mn-caution svg {
+  width: 14px;
+  height: 14px;
+}
+
+.poster--minimal.poster--story .mn-prevention__list {
+  gap: 10px;
+}
+
+.poster--minimal.poster--story .mn-prevention__list li {
+  gap: 10px;
+  font-size: 15.2px;
+  line-height: 1.44;
+}
+
+.poster--minimal.poster--story .mn-prevention__list li > span {
+  width: 17px;
+  height: 17px;
+  margin-top: 1px;
+}
+
+.poster--minimal.poster--story .mn-prevention__list li > span svg {
+  width: 9px;
+  height: 9px;
+}
+
+.poster--minimal.poster--story .mn-callout {
+  gap: 13px;
+  margin-top: 17px;
+  padding: 13px 54px 13px 15px;
+  border-left-width: 5px;
+}
+
+.poster--minimal.poster--story .mn-callout > span {
+  width: 30px;
+  height: 30px;
+}
+
+.poster--minimal.poster--story .mn-callout > span svg {
+  width: 16px;
+  height: 16px;
+}
+
+.poster--minimal.poster--story .mn-callout p {
+  font-size: 13.8px;
+}
+
+.poster--minimal.poster--story .mn-callout__icon {
+  right: 19px;
+  width: 23px;
+  height: 23px;
+}
+
+.poster--minimal.poster--story .mn-footer {
+  height: auto;
+  padding: 24px 62px 22px;
+  gap: 14px;
+}
+
+.poster--minimal.poster--story .mn-footer__top {
+  padding-bottom: 15px;
+}
+
+.poster--minimal.poster--story .poster-values__label,
+.poster--minimal.poster--story .poster-values__list {
+  font-size: 9.2px;
+}
+
+.poster--minimal.poster--story .mn-footer__motto {
+  font-size: 25px;
+}
+
+.poster--minimal.poster--story .poster-contacts span {
+  font-size: 11.5px;
+}
+
+.poster--minimal.poster--story .poster-contacts svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--minimal.poster--story .mn-footer__bottom {
+  padding-top: 13px;
+}
+
+.poster--minimal.poster--story .mn-footer__disclaimer {
+  max-width: 790px;
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+.poster--minimal.poster--story .mn-footer__bottom > span {
+  font-size: 9px;
+}
+
+/* =========================================================
+   TEMPLATE C — MINIMAL LANDSCAPE
+   ========================================================= */
+
+.poster--minimal.poster--landscape {
+  --poster-name-size: 52px;
+  background: #ffffff;
+}
+
+.poster--minimal.poster--landscape .mn-l-rule {
+  flex-shrink: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #c8202f 0%, #c8202f 34%, #0d2a4c 34%, #0d2a4c 100%);
+}
+
+.poster--minimal.poster--landscape .mn-l-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-shrink: 0;
+  height: 58px;
+  padding: 0 40px;
+  border-bottom: 1px solid #e6eef6;
+  background: #ffffff;
+}
+
+.poster--minimal.poster--landscape .poster-wordmark {
+  gap: 10px;
+}
+
+.poster--minimal.poster--landscape .poster-wordmark__mark {
+  height: 36px;
+}
+
+.poster--minimal.poster--landscape .poster-wordmark__copy {
+  gap: 2px;
+}
+
+.poster--minimal.poster--landscape .poster-wordmark__copy span {
+  font-size: 6.5px;
+}
+
+.poster--minimal.poster--landscape .poster-wordmark__copy strong {
+  font-size: 11px;
+}
+
+.poster--minimal.poster--landscape .mn-l-alert {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  padding: 6px 11px;
+  border: 1px solid #f0d1d4;
+  border-radius: 4px;
+  background: #fff6f6;
+  color: #a81a27;
+}
+
+.poster--minimal.poster--landscape .mn-l-alert svg {
+  width: 11px;
+  height: 11px;
+}
+
+.poster--minimal.poster--landscape .mn-l-alert strong {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 10.5px;
+  font-weight: 740;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
+}
+
+.poster--minimal.poster--landscape .mn-l-header__series {
+  padding-left: 16px;
+  border-left: 1px solid #dde7f1;
+  color: #93a4b5;
+  font-size: 6.5px;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  white-space: nowrap;
+}
+
+.poster--minimal.poster--landscape .mn-l-hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 28px;
+  flex-shrink: 0;
+  height: 166px;
+  overflow: hidden;
+  padding: 14px 40px 12px;
+  background:
+    radial-gradient(circle at 96% 0%, rgba(7, 85, 165, 0.045), transparent 24%),
+    #ffffff;
+}
+
+.poster--minimal.poster--landscape .mn-l-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.poster--minimal.poster--landscape .mn-l-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  color: #0755a5;
+  font-size: 8.8px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.poster--minimal.poster--landscape .mn-l-eyebrow::before {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background: #c8202f;
+}
+
+.poster--minimal.poster--landscape .poster-name {
+  color: #0d2a4c;
+}
+
+.poster--minimal.poster--landscape .mn-l-role {
+  margin-top: 4px;
+  color: #5c6f82;
+  font-size: 11.5px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.poster--minimal.poster--landscape .mn-l-quote {
+  max-width: 800px;
+  margin-top: 7px;
+  padding-left: 9px;
+  border-left: 1px solid #dbe6f0;
+  color: #3c5166;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.poster--minimal.poster--landscape .poster-meta {
+  margin-top: 6px;
+  padding-left: 10px;
+  gap: 3px 10px;
+}
+
+.poster--minimal.poster--landscape .poster-meta span {
+  font-size: 9.5px;
+}
+
+.poster--minimal.poster--landscape .poster-meta svg {
+  width: 10px;
+  height: 10px;
+}
+
+.poster--minimal.poster--landscape .poster-verified {
+  margin-bottom: 5px;
+  padding: 4px 7px;
+  gap: 5px;
+  border-left-width: 2px;
+  background: #f7fafc;
+}
+
+.poster--minimal.poster--landscape .poster-verified > svg {
+  width: 12px;
+  height: 12px;
+}
+
+.poster--minimal.poster--landscape .poster-verified__label {
+  display: none;
+}
+
+.poster--minimal.poster--landscape .poster-verified strong {
+  font-size: 8.5px;
+}
+
+.poster--minimal.poster--landscape .poster-verified__source {
+  font-size: 7px;
+}
+
+.poster--minimal.poster--landscape .mn-l-portrait {
+  position: relative;
+  align-self: center;
+  width: 220px;
+  height: 140px;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #e8f1fa;
+}
+
+.poster--minimal.poster--landscape .mn-l-portrait::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 38px;
+  height: 3px;
+  background: #c8202f;
+}
+
+.poster--minimal.poster--landscape .mn-l-portrait__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 5px 8px;
+  background: linear-gradient(transparent, rgba(4, 22, 44, 0.72));
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 6.8px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+}
+
+.poster--minimal.poster--landscape .mn-l-health {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    'head head'
+    'facts prevent'
+    'callout callout';
+  gap: 8px 30px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 13px 40px 14px;
+  border-top: 1px solid #dfe9f3;
+  background: #f8fbfd;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__head {
+  grid-area: head;
+  display: flex;
+  align-items: flex-end;
+  gap: 22px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #e2ebf4;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__head > span {
+  display: none;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__head h2 {
+  color: #0d2a4c;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 25px;
+  font-weight: 760;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__head p {
+  max-width: 430px;
+  margin-left: auto;
+  padding-bottom: 1px;
+  color: #778b9e;
+  font-size: 9.5px;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__facts,
+.poster--minimal.poster--landscape .mn-l-health__prevent {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__facts {
+  grid-area: facts;
+  padding-right: 30px;
+  border-right: 1px solid #e2ebf4;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__prevent {
+  grid-area: prevent;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__facts h3,
+.poster--minimal.poster--landscape .mn-l-health__prevent h3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-bottom: 7px;
+  color: #0d2a4c;
+  font-size: 10.6px;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1.3;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__facts h3 > span,
+.poster--minimal.poster--landscape .mn-l-health__prevent h3 > span {
+  color: #c8202f;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 8px;
+  line-height: 1.55;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__facts ul,
+.poster--minimal.poster--landscape .mn-l-health__prevent ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2px;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__facts li {
+  color: #465c71;
+  font-size: 11.2px;
+  font-weight: 500;
+  line-height: 1.32;
+}
+
+.poster--minimal.poster--landscape .mn-l-caution {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 5px;
+  color: #8193a5;
+  font-size: 8.8px;
+  font-style: italic;
+  line-height: 1.38;
+}
+
+.poster--minimal.poster--landscape .mn-l-caution svg {
+  width: 9px;
+  height: 9px;
+  margin-top: 1px;
+  color: #0755a5;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__prevent li {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  color: #465c71;
+  font-size: 10.6px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.poster--minimal.poster--landscape .mn-l-health__prevent li svg {
+  width: 9px;
+  height: 9px;
+  margin-top: 1px;
+  color: #0755a5;
+  stroke-width: 3;
+}
+
+.poster--minimal.poster--landscape .mn-l-callout {
+  grid-area: callout;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-left: 3px solid #c8202f;
+  background: #ffffff;
+  color: #8f1b26;
+  font-size: 9.8px;
+  font-weight: 750;
+  letter-spacing: 0.012em;
+  line-height: 1.3;
+}
+
+.poster--minimal.poster--landscape .mn-l-callout svg {
+  width: 13px;
+  height: 13px;
+  color: #c8202f;
+}
+
+.poster--minimal.poster--landscape .mn-l-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  flex-shrink: 0;
+  height: 74px;
+  padding: 0 40px;
+  border-top: 2px solid #0d2a4c;
+  background: #ffffff;
+}
+
+.poster--minimal.poster--landscape .poster-values {
+  flex-shrink: 0;
+}
+
+.poster--minimal.poster--landscape .poster-values__label,
+.poster--minimal.poster--landscape .poster-values__list {
+  font-size: 7.8px;
+}
+
+.poster--minimal.poster--landscape .mn-l-footer__motto {
+  flex-shrink: 0;
+  color: #0d2a4c;
+  font-size: 16px;
+}
+
+.poster--minimal.poster--landscape .poster-contacts {
+  max-width: 250px;
+  gap: 3px 9px;
+}
+
+.poster--minimal.poster--landscape .poster-contacts span {
+  font-size: 8.5px;
+}
+
+.poster--minimal.poster--landscape .poster-contacts svg {
+  width: 9px;
+  height: 9px;
+}
+
+.poster--minimal.poster--landscape .mn-l-footer__disclaimer {
+  max-width: 300px;
+  margin-left: auto;
+  color: #91a2b2;
+  font-size: 7.8px;
+  line-height: 1.4;
+}
+
+/* Compact landscape layout when a verified organiser notice is present.
+   The notice adds height to the member hero, so the eyebrow and some
+   typographic breathing room give way to keep every line visible. */
+
+.poster--landscape.poster--verified {
+  --poster-name-size: 46px;
+}
+
+.poster--official.poster--landscape.poster--verified .op-l-eyebrow,
+.poster--modern.poster--landscape.poster--verified .mo-l-eyebrow,
+.poster--minimal.poster--landscape.poster--verified .mn-l-eyebrow {
+  display: none;
+}
+
+.poster--official.poster--landscape.poster--verified .op-l-hero {
+  height: 196px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+.poster--modern.poster--landscape.poster--verified .mo-l-hero {
+  height: 190px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+.poster--minimal.poster--landscape.poster--verified .mn-l-hero {
+  height: 186px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+.poster--official.poster--landscape.poster--verified .op-l-role,
+.poster--modern.poster--landscape.poster--verified .mo-l-role,
+.poster--minimal.poster--landscape.poster--verified .mn-l-role {
+  margin-top: 2px;
+  font-size: 11px;
+}
+
+.poster--official.poster--landscape.poster--verified .op-l-quote,
+.poster--modern.poster--landscape.poster--verified .mo-l-quote,
+.poster--minimal.poster--landscape.poster--verified .mn-l-quote {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.38;
+}
+
+.poster--official.poster--landscape.poster--verified .poster-meta,
+.poster--modern.poster--landscape.poster--verified .poster-meta,
+.poster--minimal.poster--landscape.poster--verified .poster-meta {
+  margin-top: 4px;
+}
+
+.poster--official.poster--landscape.poster--verified .poster-verified,
+.poster--modern.poster--landscape.poster--verified .poster-verified,
+.poster--minimal.poster--landscape.poster--verified .poster-verified {
+  margin-bottom: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
