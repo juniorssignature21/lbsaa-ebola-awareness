@@ -2125,16 +2125,16 @@
 .poster--modern .mo-quote {
   max-width: 580px;
   margin-top: 13px;
-  color: rgba(237, 247, 255, 0.84);
-  font-size: 18px;
-  font-weight: 500;
+  color: rgba(244, 250, 255, 0.94);
+  font-size: 20px;
+  font-weight: 550;
   letter-spacing: -0.008em;
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
 
 .poster--modern .mo-quote--long {
-  font-size: 16px;
+  font-size: 17.5px;
   line-height: 1.48;
 }
 
@@ -2472,7 +2472,7 @@
 /* Modern — portrait rows */
 
 .poster--modern.poster--portrait {
-  --poster-name-size: 60px;
+  --poster-name-size: 66px;
 }
 
 .poster--modern.poster--portrait .mo-header {
@@ -2495,7 +2495,7 @@
 /* Modern — story rows */
 
 .poster--modern.poster--story {
-  --poster-name-size: 72px;
+  --poster-name-size: 78px;
 }
 
 .poster--modern.poster--story .mo-header {
@@ -2586,12 +2586,12 @@
 
 .poster--modern.poster--story .mo-quote {
   margin-top: 19px;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.55;
 }
 
 .poster--modern.poster--story .mo-quote--long {
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .poster--modern.poster--story .mo-hero .poster-meta {
@@ -2956,9 +2956,9 @@
 .poster--modern.poster--landscape .mo-l-quote {
   max-width: 830px;
   margin-top: 7px;
-  color: rgba(237, 247, 255, 0.8);
-  font-size: 13px;
-  font-weight: 500;
+  color: rgba(244, 250, 255, 0.9);
+  font-size: 13.5px;
+  font-weight: 550;
   line-height: 1.45;
   overflow-wrap: anywhere;
 }
@@ -3413,16 +3413,16 @@
   margin-top: 13px;
   padding-left: 17px;
   border-left: 2px solid #e0e9f2;
-  color: #384d62;
-  font-size: 18.5px;
-  font-weight: 500;
+  color: #263c52;
+  font-size: 20px;
+  font-weight: 550;
   letter-spacing: -0.01em;
   line-height: 1.52;
   overflow-wrap: anywhere;
 }
 
 .poster--minimal .mn-quote--long {
-  font-size: 16.4px;
+  font-size: 17.3px;
   line-height: 1.48;
 }
 
@@ -3810,7 +3810,7 @@
 /* Minimal — portrait rows */
 
 .poster--minimal.poster--portrait {
-  --poster-name-size: 64px;
+  --poster-name-size: 68px;
 }
 
 .poster--minimal.poster--portrait .mn-rule {
@@ -3837,7 +3837,7 @@
 /* Minimal — story rows */
 
 .poster--minimal.poster--story {
-  --poster-name-size: 78px;
+  --poster-name-size: 84px;
 }
 
 .poster--minimal.poster--story .mn-rule {
@@ -3912,7 +3912,7 @@
 .poster--minimal.poster--story .mn-quote {
   margin-top: 20px;
   padding-left: 22px;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.55;
 }
 
@@ -4285,9 +4285,9 @@
   margin-top: 7px;
   padding-left: 9px;
   border-left: 1px solid #dbe6f0;
-  color: #3c5166;
-  font-size: 13px;
-  font-weight: 500;
+  color: #2f4559;
+  font-size: 13.5px;
+  font-weight: 550;
   line-height: 1.45;
   overflow-wrap: anywhere;
 }
@@ -4639,4 +4639,832 @@
   margin-bottom: 3px;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+
+/* =========================================================
+   Simplified poster content
+   ========================================================= */
+
+.poster-notice {
+  margin: 0;
+  font-size: 8.4px;
+  font-weight: 600;
+  letter-spacing: 0.018em;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.poster-notice--light {
+  color: rgba(226, 241, 255, 0.6);
+}
+
+.poster-notice--dark {
+  color: #7b8ea2;
+}
+
+/* Official — lighter guidance panel */
+
+.poster--official.poster--portrait .op-health__header,
+.poster--official.poster--story .op-health__header {
+  align-items: flex-start;
+  padding-bottom: 0;
+}
+
+.poster--official.poster--portrait .op-health__grid,
+.poster--official.poster--story .op-health__grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 14px;
+  border-top: 1px solid #e0edf8;
+}
+
+.poster--official.poster--portrait .op-facts,
+.poster--official.poster--story .op-facts {
+  padding: 20px 32px 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.poster--official.poster--portrait .op-prevention,
+.poster--official.poster--story .op-prevention {
+  padding: 20px 0 8px 32px;
+  border: 0;
+  border-left: 1px solid #e0edf8;
+  border-radius: 0;
+  background: transparent;
+  color: #314a61;
+}
+
+.poster--official.poster--portrait .op-facts h3,
+.poster--official.poster--story .op-facts h3,
+.poster--official.poster--portrait .op-prevention h3,
+.poster--official.poster--story .op-prevention h3 {
+  margin: 0 0 16px;
+  color: #063a78;
+  font-size: 15px;
+  letter-spacing: 0.07em;
+}
+
+.poster--official.poster--portrait .op-prevention h3,
+.poster--official.poster--story .op-prevention h3 {
+  color: #063a78;
+}
+
+.poster--official.poster--portrait .op-prevention h3 svg,
+.poster--official.poster--story .op-prevention h3 svg {
+  color: #0755a5;
+}
+
+.poster--official.poster--portrait .op-symptoms,
+.poster--official.poster--story .op-symptoms,
+.poster--official.poster--portrait .op-prevention__list,
+.poster--official.poster--story .op-prevention__list {
+  justify-content: center;
+  gap: 24px;
+}
+
+.poster--official.poster--portrait .op-symptoms li,
+.poster--official.poster--story .op-symptoms li {
+  color: #314a61;
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.poster--official.poster--portrait .op-prevention__list li,
+.poster--official.poster--story .op-prevention__list li {
+  color: #314a61;
+  font-size: 16.5px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.poster--official.poster--portrait .op-symptoms__dot,
+.poster--official.poster--story .op-symptoms__dot {
+  width: 6px;
+  height: 6px;
+  margin-top: 9px;
+  background: #c8202f;
+}
+
+.poster--official.poster--portrait .op-check,
+.poster--official.poster--story .op-check {
+  width: 18px;
+  height: 18px;
+  background: #e8f3ff;
+  color: #0755a5;
+}
+
+.poster--official.poster--portrait .op-check svg,
+.poster--official.poster--story .op-check svg {
+  width: 10px;
+  height: 10px;
+}
+
+.poster--official.poster--landscape .op-l-health {
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.poster--official.poster--landscape .op-l-health__head h2 {
+  max-width: 170px;
+}
+
+/* Simplified footers */
+
+.poster--official .op-footer__top {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.poster--official.poster--portrait .op-footer,
+.poster--official.poster--story .op-footer {
+  gap: 10px;
+}
+
+.poster--official.poster--landscape .op-l-footer__notice {
+  max-width: 360px;
+  margin-left: auto;
+  font-size: 7.6px;
+  text-align: right;
+}
+
+.poster--modern .mo-card h3 {
+  margin-top: 0;
+}
+
+.poster--modern .mo-footer__top {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.poster--modern.poster--portrait .mo-footer,
+.poster--modern.poster--story .mo-footer {
+  gap: 10px;
+}
+
+.poster--modern.poster--landscape .mo-l-footer__notice {
+  max-width: 340px;
+  margin-left: auto;
+  font-size: 7.6px;
+  text-align: right;
+}
+
+.poster--minimal .mn-footer__top {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.poster--minimal.poster--portrait .mn-footer,
+.poster--minimal.poster--story .mn-footer {
+  gap: 9px;
+}
+
+.poster--minimal.poster--landscape .mn-l-footer__notice {
+  max-width: 360px;
+  margin-left: auto;
+  font-size: 7.6px;
+  text-align: right;
+}
+
+/* =========================================================
+   TEMPLATE A — MODERN MINIMAL OFFICIAL POSTER
+   Flat navy / white / soft-tint campaign treatment
+   ========================================================= */
+
+.poster--official.em-poster {
+  padding: 0;
+  background: #f5f9fd;
+  color: #0b2e5c;
+  font-family: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  isolation: isolate;
+}
+
+.em-poster .poster-photo {
+  background: #dceaf7;
+}
+
+.em-poster .poster-photo__placeholder {
+  background: #e9f2fa;
+  color: #0b2e5c;
+}
+
+/* Slim header */
+
+.em-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  padding: 36px 64px 0;
+}
+
+.em-marks {
+  gap: 18px;
+}
+
+.em-marks__lbsaa {
+  display: block;
+  width: auto;
+  height: 52px;
+  object-fit: contain;
+}
+
+.em-marks__school {
+  display: block;
+  width: auto;
+  height: 46px;
+  object-fit: contain;
+}
+
+.em-marks .brand-marks__divider {
+  width: 1px;
+  height: 50px;
+  background: #0b2e5c;
+  opacity: 0.16;
+}
+
+.em-accent {
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 99px;
+  background: #d62839;
+}
+
+/* Hero */
+
+.em-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  align-items: center;
+  gap: 52px;
+  flex: 1;
+  min-height: 0;
+  padding: 8px 64px 30px;
+}
+
+.em-hero__copy {
+  min-width: 0;
+}
+
+.em-headline {
+  color: #0b2e5c;
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.em-subhead {
+  max-width: 440px;
+  margin-top: 22px;
+  color: #5e7187;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.5;
+}
+
+.em-profile {
+  min-width: 0;
+}
+
+.em-photo {
+  height: 548px;
+  overflow: hidden;
+  border-radius: 26px;
+  background: #dceaf7;
+  box-shadow: 0 18px 44px rgba(11, 46, 92, 0.1);
+}
+
+.em-profile__copy {
+  margin-top: 16px;
+}
+
+.em-caption {
+  color: #6a7f94;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.em-name {
+  margin-top: 4px;
+  color: #0b2e5c;
+  font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.em-quote {
+  margin-top: 10px;
+  padding-left: 14px;
+  border-left: 3px solid #d62839;
+  color: #31485f;
+  font-size: 18px;
+  font-weight: 550;
+  letter-spacing: -0.012em;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Facts cards */
+
+.em-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  flex-shrink: 0;
+  padding: 0 64px 26px;
+}
+
+.em-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 26px 28px 28px;
+  border: 1px solid #e3edf6;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(11, 46, 92, 0.055);
+}
+
+.em-card__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.em-card__badge {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  flex-shrink: 0;
+}
+
+.em-card__badge svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+}
+
+.em-card--symptoms .em-card__badge {
+  background: #fdecee;
+  color: #d62839;
+}
+
+.em-card--prevention .em-card__badge {
+  background: #e9f3fd;
+  color: #0b5fa5;
+}
+
+.em-card__title {
+  color: #0b2e5c;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.em-card__list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.em-card__list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #40566e;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.008em;
+  line-height: 1.35;
+}
+
+.em-card__item-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.em-card__item-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+}
+
+.em-card--symptoms .em-card__item-icon {
+  background: #fff4f5;
+  color: #d62839;
+}
+
+.em-card--prevention .em-card__item-icon {
+  background: #f0f7fd;
+  color: #0b5fa5;
+}
+
+/* Footer strip */
+
+.em-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-shrink: 0;
+  min-height: 66px;
+  padding: 14px 64px;
+  border-top: 1px solid #dce8f3;
+  background: #ffffff;
+}
+
+.em-footer__emergency {
+  color: #415970;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.4;
+}
+
+.em-footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  text-align: right;
+}
+
+.em-footer__org {
+  color: #7a8ea3;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  line-height: 1.4;
+}
+
+.em-footer .poster-contacts {
+  justify-content: flex-end;
+  gap: 3px 12px;
+  color: #7a8ea3;
+  font-size: 9px;
+}
+
+.em-footer .poster-contacts span {
+  font-size: 9px;
+}
+
+/* Verified public-health notice, sized for this layout */
+
+.em-poster .poster-verified {
+  margin-bottom: 18px;
+  padding: 10px 14px 10px 12px;
+  border-left-width: 4px;
+  border-radius: 0 10px 10px 0;
+}
+
+.em-poster .poster-verified > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.em-poster .poster-verified__label {
+  font-size: 8px;
+}
+
+.em-poster .poster-verified strong {
+  font-size: 12px;
+}
+
+.em-poster .poster-verified__source {
+  font-size: 9px;
+}
+
+/* Story format */
+
+.poster--official.poster--story .em-header {
+  padding: 46px 72px 0;
+}
+
+.poster--official.poster--story .em-marks {
+  gap: 22px;
+}
+
+.poster--official.poster--story .em-marks__lbsaa {
+  height: 66px;
+}
+
+.poster--official.poster--story .em-marks__school {
+  height: 58px;
+}
+
+.poster--official.poster--story .em-marks .brand-marks__divider {
+  height: 62px;
+}
+
+.poster--official.poster--story .em-accent {
+  width: 74px;
+  margin-top: 16px;
+}
+
+.poster--official.poster--story .em-hero {
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 56px;
+  padding: 10px 72px 36px;
+}
+
+.poster--official.poster--story .em-headline {
+  font-size: 64px;
+}
+
+.poster--official.poster--story .em-subhead {
+  margin-top: 24px;
+  font-size: 23px;
+}
+
+.poster--official.poster--story .em-photo {
+  height: 760px;
+  border-radius: 30px;
+}
+
+.poster--official.poster--story .em-profile__copy {
+  margin-top: 20px;
+}
+
+.poster--official.poster--story .em-caption {
+  font-size: 14px;
+}
+
+.poster--official.poster--story .em-name {
+  margin-top: 5px;
+  font-size: 38px;
+}
+
+.poster--official.poster--story .em-quote {
+  margin-top: 12px;
+  padding-left: 17px;
+  border-left-width: 4px;
+  font-size: 21px;
+}
+
+.poster--official.poster--story .em-cards {
+  gap: 28px;
+  padding: 0 72px 34px;
+}
+
+.poster--official.poster--story .em-card {
+  min-height: 440px;
+  padding: 34px 36px 36px;
+  border-radius: 26px;
+}
+
+.poster--official.poster--story .em-card__head {
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.poster--official.poster--story .em-card__badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+}
+
+.poster--official.poster--story .em-card__badge svg {
+  width: 26px;
+  height: 26px;
+}
+
+.poster--official.poster--story .em-card__title {
+  font-size: 30px;
+}
+
+.poster--official.poster--story .em-card__list {
+  justify-content: space-evenly;
+  gap: 0;
+}
+
+.poster--official.poster--story .em-card__list li {
+  gap: 16px;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.poster--official.poster--story .em-card__item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.poster--official.poster--story .em-card__item-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.poster--official.poster--story .em-footer {
+  min-height: 84px;
+  padding: 16px 72px;
+}
+
+.poster--official.poster--story .em-footer__emergency {
+  font-size: 15px;
+}
+
+.poster--official.poster--story .em-footer__org {
+  font-size: 11px;
+}
+
+/* Landscape format */
+
+.poster--official.poster--landscape .em-header {
+  padding: 22px 48px 0;
+}
+
+.poster--official.poster--landscape .em-marks {
+  gap: 14px;
+}
+
+.poster--official.poster--landscape .em-marks__lbsaa {
+  height: 38px;
+}
+
+.poster--official.poster--landscape .em-marks__school {
+  height: 34px;
+}
+
+.poster--official.poster--landscape .em-marks .brand-marks__divider {
+  height: 36px;
+}
+
+.poster--official.poster--landscape .em-accent {
+  width: 48px;
+  height: 2.5px;
+  margin-top: 10px;
+}
+
+.poster--official.poster--landscape .em-l-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  min-height: 0;
+  padding: 4px 48px 18px;
+}
+
+.poster--official.poster--landscape .em-l-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+.poster--official.poster--landscape .em-l-headline {
+  color: #0b2e5c;
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.poster--official.poster--landscape .em-l-subhead {
+  margin-top: 8px;
+  color: #5e7187;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.poster--official.poster--landscape .poster-verified {
+  margin-bottom: 10px;
+  padding: 6px 10px;
+}
+
+.poster--official.poster--landscape .poster-verified > svg {
+  width: 15px;
+  height: 15px;
+}
+
+.poster--official.poster--landscape .poster-verified strong {
+  font-size: 10px;
+}
+
+.poster--official.poster--landscape .poster-verified__label {
+  font-size: 6.5px;
+}
+
+.poster--official.poster--landscape .poster-verified__source {
+  font-size: 7.5px;
+}
+
+.poster--official.poster--landscape .em-l-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.poster--official.poster--landscape .em-card {
+  padding: 16px 18px 18px;
+  border-radius: 16px;
+}
+
+.poster--official.poster--landscape .em-card__head {
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.poster--official.poster--landscape .em-card__badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+}
+
+.poster--official.poster--landscape .em-card__badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.poster--official.poster--landscape .em-card__title {
+  font-size: 17px;
+}
+
+.poster--official.poster--landscape .em-card__list {
+  gap: 9px;
+}
+
+.poster--official.poster--landscape .em-card__list li {
+  gap: 9px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.poster--official.poster--landscape .em-card__item-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+}
+
+.poster--official.poster--landscape .em-card__item-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.poster--official.poster--landscape .em-profile {
+  align-self: center;
+}
+
+.poster--official.poster--landscape .em-photo {
+  height: 310px;
+  border-radius: 20px;
+}
+
+.poster--official.poster--landscape .em-profile__copy {
+  margin-top: 12px;
+}
+
+.poster--official.poster--landscape .em-caption {
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+}
+
+.poster--official.poster--landscape .em-name {
+  margin-top: 3px;
+  font-size: 22px;
+}
+
+.poster--official.poster--landscape .em-quote {
+  margin-top: 7px;
+  padding-left: 10px;
+  border-left-width: 2px;
+  font-size: 13.5px;
+  line-height: 1.42;
+}
+
+.poster--official.poster--landscape .em-footer {
+  min-height: 56px;
+  padding: 10px 48px;
+}
+
+.poster--official.poster--landscape .em-footer__emergency {
+  font-size: 12px;
+}
+
+.poster--official.poster--landscape .em-footer__org {
+  font-size: 9.5px;
 }

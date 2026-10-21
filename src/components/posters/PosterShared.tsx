@@ -8,9 +8,8 @@ import {
 } from 'lucide-react';
 import { BrandMarks } from '../BrandLogo';
 import {
-  DISCLAIMER,
-  LBSAA_MOTTO,
   LBSAA_VALUES,
+  POSTER_NOTICE,
 } from '../../data/campaignContent';
 import type { PosterContent } from '../../types/campaign';
 import {
@@ -158,12 +157,18 @@ export function PosterValues({ theme = 'light' }: { theme?: 'light' | 'dark' }) 
   );
 }
 
-export function PosterMotto({ className = '' }: { className?: string }) {
-  return <p className={`poster-motto ${className}`.trim()}>{LBSAA_MOTTO}</p>;
-}
-
-export function PosterDisclaimer({ className = '' }: { className?: string }) {
-  return <p className={`poster-disclaimer ${className}`.trim()}>{DISCLAIMER}</p>;
+export function PosterNotice({
+  theme = 'light',
+  className = '',
+}: {
+  theme?: 'light' | 'dark';
+  className?: string;
+}) {
+  return (
+    <p className={`poster-notice poster-notice--${theme} ${className}`.trim()}>
+      {POSTER_NOTICE}
+    </p>
+  );
 }
 
 export function PosterMeta({

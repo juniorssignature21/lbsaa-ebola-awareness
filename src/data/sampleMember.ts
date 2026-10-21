@@ -22,9 +22,9 @@ export const createEmptyFields = (): CampaignFields => ({
 
 export const SAMPLE_MEMBER: CampaignFields = {
   ...createEmptyFields(),
-  fullName: 'Adaeze Balogun',
-  title: 'Public Health Consultant',
-  company: 'Lagos Community Health Alliance',
+  fullName: 'John John',
+  title: 'LBSAA Member',
+  company: '',
   programme: 'MBA',
   classYear: '2018',
   location: 'Lekki, Lagos',

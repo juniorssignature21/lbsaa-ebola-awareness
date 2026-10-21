@@ -6,48 +6,40 @@ import type {
 
 export const ORGANISATION_NAME = 'Lagos Business School Alumni Association';
 export const ORGANISATION_SHORT_NAME = 'LBSAA';
-export const ALERT_HEADLINE = 'EBOLA AWARENESS — ACT RESPONSIBLY';
+export const ALERT_HEADLINE = 'EBOLA ALERT — ACT NOW';
 export const ALERT_LABEL = 'Public health notice';
 
 export const DEFAULT_MESSAGE =
-  'Together, we can promote awareness, encourage prevention, and protect our communities through responsible action.';
+  'Together, we can promote awareness, encourage prevention, and protect our communities.';
 
-export const MAX_MESSAGE_WORDS = 30;
-export const MAX_MESSAGE_LENGTH = 240;
+export const MAX_MESSAGE_WORDS = 20;
+export const MAX_MESSAGE_LENGTH = 200;
 export const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
 
-export const HEALTH_INTRO =
-  'Ebola virus disease is a serious illness that can spread through direct contact with the blood or other body fluids of a person who is sick with or has died from the disease, or contaminated materials.';
-
 export const SYMPTOMS = [
-  'Fever.',
-  'Fatigue and weakness.',
-  'Headache and muscle pain.',
-  'Vomiting or diarrhoea.',
-  'Unexplained bleeding may occur in some cases.',
+  'Fever & high temperature',
+  'Fatigue & weakness',
+  'Bleeding (gums, nose)',
 ];
-
-export const SYMPTOM_CAUTION =
-  'These symptoms can also occur in other illnesses and require professional assessment.';
 
 export const PREVENTION_ACTIONS = [
-  'Avoid direct contact with the blood and body fluids of people who are sick.',
-  'Wash hands regularly with soap and water.',
-  'Avoid handling potentially contaminated materials.',
-  'Do not touch the body of someone who has died from suspected Ebola.',
-  'Seek medical attention promptly if symptoms develop after a possible exposure.',
-  'Follow instructions from qualified public health authorities.',
+  'Wash hands with soap or sanitizer',
+  'Avoid contact with sick people',
+  'Report suspected cases immediately',
 ];
 
-export const EMERGENCY_CALLOUT =
-  'IF YOU SUSPECT EBOLA, SEEK PROFESSIONAL MEDICAL HELP AND CONTACT THE APPROPRIATE PUBLIC HEALTH AUTHORITIES PROMPTLY.';
+export const EMERGENCY_CONTACT =
+  'Emergency updates: NCDC 6232 · www.ncdc.gov.ng';
+
+export const POSTER_NOTICE =
+  'For emergency updates contact NCDC: 6232 | www.ncdc.gov.ng | Lagos Business School Alumni Association';
 
 export const DISCLAIMER =
   'This poster provides general awareness information and does not replace professional medical advice. Follow current guidance from the appropriate public health authorities.';
 
 export const LBSAA_VALUES = [
   'Leadership in crisis',
-  'Stay informed',
+  'Stay alert, stay safe',
   'Act responsibly',
 ];
 
@@ -66,9 +58,9 @@ export const TEMPLATES: TemplateDefinition[] = [
   {
     id: 'official',
     code: 'A',
-    name: 'Official Campaign',
-    description: 'Classic LBSAA blue, white facts panel and red alert treatment.',
-    swatches: ['#0755A5', '#063A78', '#C8202F'],
+    name: 'Modern Minimal',
+    description: 'Calm navy and white layout with soft cards and thin line icons.',
+    swatches: ['#0B2E5C', '#F5F9FD', '#D62839'],
   },
   {
     id: 'modern',

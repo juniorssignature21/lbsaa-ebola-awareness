@@ -1,27 +1,20 @@
 import {
-  Activity,
   AlertTriangle,
   Check,
-  Info,
-  ShieldCheck,
-  Sparkles,
+  Shield,
   Thermometer,
 } from 'lucide-react';
 import {
   ALERT_HEADLINE,
-  EMERGENCY_CALLOUT,
-  HEALTH_INTRO,
   PREVENTION_ACTIONS,
   SYMPTOMS,
-  SYMPTOM_CAUTION,
 } from '../../data/campaignContent';
 import type { PosterContent, PosterFormat } from '../../types/campaign';
 import { getDisplayName, getRoleLine } from '../../utils/poster';
 import {
   PosterContacts,
-  PosterDisclaimer,
   PosterMeta,
-  PosterMotto,
+  PosterNotice,
   PosterPhoto,
   PosterValues,
   PosterWordmark,
@@ -59,16 +52,11 @@ function ModernPortrait({
 
       <header className="mo-header">
         <PosterWordmark theme="light" />
-        <div className="mo-header__series">
-          <span>CAMPAIGN SERIES</span>
-          <strong>01 / COMMUNITY HEALTH</strong>
-        </div>
       </header>
 
       <div className="mo-alert">
         <AlertTriangle aria-hidden="true" />
         <strong>{ALERT_HEADLINE}</strong>
-        <span>STAY INFORMED</span>
       </div>
 
       <section className="mo-hero">
@@ -77,18 +65,10 @@ function ModernPortrait({
           <div className="mo-portrait-block__frame">
             <PosterPhoto content={content} />
           </div>
-          <span className="mo-portrait-block__tag">
-            <ShieldCheck aria-hidden="true" />
-            LBSAA / CARE IN ACTION
-          </span>
         </div>
 
         <div className="mo-hero__copy">
           <VerifiedNoticeBanner content={content} />
-          <span className="mo-eyebrow">
-            <Sparkles aria-hidden="true" />
-            A MESSAGE FROM AN LBSAA MEMBER
-          </span>
           <h1 className={`poster-name ${nameSize(name)}`}>{name}</h1>
           {getRoleLine(content) ? (
             <p className="mo-role">{getRoleLine(content)}</p>
@@ -97,32 +77,19 @@ function ModernPortrait({
             “{content.message}”
           </p>
           <PosterMeta content={content} />
-          <div className="mo-member-strip">
-            <span>LEADERSHIP IN CRISIS</span>
-            <i aria-hidden="true" />
-            <span>ACT RESPONSIBLY</span>
-          </div>
         </div>
       </section>
 
       <section className="mo-health">
         <div className="mo-health__head">
-          <div>
-            <span className="mo-health__eyebrow">
-              <Activity aria-hidden="true" />
-              PUBLIC HEALTH GUIDANCE
-            </span>
-            <h2>EBOLA: KNOW THE FACTS</h2>
-          </div>
-          <span className="mo-health__stamp">SYMPTOMS / ACTIONS</span>
+          <h2>EBOLA: KNOW THE FACTS</h2>
         </div>
 
         <div className="mo-health__cards">
           <div className="mo-card mo-card--facts">
-            <p className="mo-card__intro">{HEALTH_INTRO}</p>
             <h3>
               <Thermometer aria-hidden="true" />
-              SYMPTOMS TO WATCH FOR
+              SYMPTOMS
             </h3>
             <ul className="mo-symptoms">
               {SYMPTOMS.map((symptom) => (
@@ -132,14 +99,13 @@ function ModernPortrait({
                 </li>
               ))}
             </ul>
-            <p className="mo-caution">
-              <Info aria-hidden="true" />
-              {SYMPTOM_CAUTION}
-            </p>
           </div>
 
           <div className="mo-card mo-card--prevention">
-            <h3>PROTECT YOURSELF AND YOUR COMMUNITY</h3>
+            <h3>
+              <Shield aria-hidden="true" />
+              PREVENTION
+            </h3>
             <ul className="mo-prevention">
               {PREVENTION_ACTIONS.map((action) => (
                 <li key={action}>
@@ -152,25 +118,14 @@ function ModernPortrait({
             </ul>
           </div>
         </div>
-
-        <div className="mo-callout">
-          <span className="mo-callout__icon">
-            <AlertTriangle aria-hidden="true" />
-          </span>
-          <p>{EMERGENCY_CALLOUT}</p>
-        </div>
       </section>
 
       <footer className="mo-footer">
         <div className="mo-footer__top">
           <PosterValues theme="light" />
-          <PosterMotto className="mo-footer__motto" />
+          <PosterContacts content={content} theme="light" compact />
         </div>
-        <PosterContacts content={content} theme="light" compact />
-        <div className="mo-footer__bottom">
-          <PosterDisclaimer className="mo-footer__disclaimer" />
-          <span>LBSAA · EBOLA AWARENESS</span>
-        </div>
+        <PosterNotice theme="light" />
       </footer>
     </article>
   );
@@ -193,17 +148,14 @@ function ModernLandscape({ content }: { content: PosterContent }) {
           <AlertTriangle aria-hidden="true" />
           <strong>{ALERT_HEADLINE}</strong>
         </div>
-        <span className="mo-l-series">CAMPAIGN SERIES · 01</span>
       </header>
 
       <section className="mo-l-hero">
         <div className="mo-l-portrait">
           <PosterPhoto content={content} />
-          <span className="mo-l-portrait__tag">LBSAA MEMBER</span>
         </div>
         <div className="mo-l-copy">
           <VerifiedNoticeBanner content={content} />
-          <span className="mo-l-eyebrow">A MESSAGE FROM AN LBSAA MEMBER</span>
           <h1 className={`poster-name ${nameSize(name)}`}>{name}</h1>
           {getRoleLine(content) ? (
             <p className="mo-l-role">{getRoleLine(content)}</p>
@@ -215,30 +167,24 @@ function ModernLandscape({ content }: { content: PosterContent }) {
 
       <section className="mo-l-health">
         <div className="mo-l-health__head">
-          <span>
-            <Activity aria-hidden="true" />
-            PUBLIC HEALTH GUIDANCE
-          </span>
           <h2>EBOLA: KNOW THE FACTS</h2>
         </div>
         <div className="mo-l-health__facts">
-          <p>{HEALTH_INTRO}</p>
           <h3>
             <Thermometer aria-hidden="true" />
-            SYMPTOMS TO WATCH FOR
+            SYMPTOMS
           </h3>
           <ul>
             {SYMPTOMS.map((symptom) => (
               <li key={symptom}>{symptom}</li>
             ))}
           </ul>
-          <p className="mo-l-caution">
-            <Info aria-hidden="true" />
-            {SYMPTOM_CAUTION}
-          </p>
         </div>
         <div className="mo-l-health__prevent">
-          <h3>PROTECT YOURSELF AND YOUR COMMUNITY</h3>
+          <h3>
+            <Shield aria-hidden="true" />
+            PREVENTION
+          </h3>
           <ul>
             {PREVENTION_ACTIONS.map((action) => (
               <li key={action}>
@@ -248,17 +194,12 @@ function ModernLandscape({ content }: { content: PosterContent }) {
             ))}
           </ul>
         </div>
-        <div className="mo-l-callout">
-          <AlertTriangle aria-hidden="true" />
-          {EMERGENCY_CALLOUT}
-        </div>
       </section>
 
       <footer className="mo-l-footer">
         <PosterValues theme="light" />
-        <PosterMotto className="mo-l-footer__motto" />
         <PosterContacts content={content} theme="light" compact />
-        <PosterDisclaimer className="mo-l-footer__disclaimer" />
+        <PosterNotice theme="light" className="mo-l-footer__notice" />
       </footer>
     </article>
   );
