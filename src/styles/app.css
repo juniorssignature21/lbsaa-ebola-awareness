@@ -4206,3 +4206,18 @@ textarea::placeholder {
     animation: none;
   }
 }
+
+.site-footer__marks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+}
+
+.site-footer__school-logo {
+  width: 176px;
+  height: auto;
+  padding: 9px 11px;
+  border-radius: 7px;
+  background: #ffffff;
+}

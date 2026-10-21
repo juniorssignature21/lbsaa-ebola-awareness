@@ -22,12 +22,12 @@ export const createEmptyFields = (): CampaignFields => ({
 
 export const SAMPLE_MEMBER: CampaignFields = {
   ...createEmptyFields(),
-  fullName: 'John Chibuzor John',
-  title: 'Developer & Technology Consultant',
-  company: 'Codesignature Tech',
-  programme: 'Executive MBA',
-  classYear: '2009',
-  location: 'Port Harcourt, Nigeria',
+  fullName: 'Adaeze Balogun',
+  title: 'Public Health Consultant',
+  company: 'Lagos Community Health Alliance',
+  programme: 'MBA',
+  classYear: '2018',
+  location: 'Lekki, Lagos',
 };
 
 export const SAMPLE_PHOTO_SRC = '/assets/sample-member.jpg';
@@ -35,8 +35,8 @@ export const SAMPLE_PHOTO_SRC = '/assets/sample-member.jpg';
 export const SAMPLE_PHOTO: PhotoState = {
   src: SAMPLE_PHOTO_SRC,
   name: 'sample-member.jpg',
-  width: 360,
-  height: 560,
+  width: 800,
+  height: 1200,
   positionX: 50,
-  positionY: 26,
+  positionY: 30,
 };

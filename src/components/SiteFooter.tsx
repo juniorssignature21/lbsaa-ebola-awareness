@@ -8,7 +8,14 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell site-footer__top">
         <div className="site-footer__brand">
-          <BrandLogo theme="white" className="site-footer__logo" />
+          <div className="site-footer__marks">
+            <BrandLogo theme="white" className="site-footer__logo" />
+            <img
+              src="/assets/lbs-school-logo.png"
+              alt="Lagos Business School, Pan-Atlantic University"
+              className="site-footer__school-logo"
+            />
+          </div>
           <p>
             A community health initiative from the Lagos Business School Alumni
             Association.
