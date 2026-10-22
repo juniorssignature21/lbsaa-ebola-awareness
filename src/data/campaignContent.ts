@@ -80,11 +80,11 @@ export const TEMPLATES: TemplateDefinition[] = [
 
 export const POSTER_SIZES: Record<PosterFormat, PosterSize> = {
   portrait: {
-    width: 1080,
-    height: 1350,
+    width: 853,
+    height: 1280,
     label: 'Portrait',
     shortLabel: 'Portrait',
-    dimensions: '1080 × 1350 px',
+    dimensions: '853 × 1280 px',
     description: 'WhatsApp, Instagram feed and LinkedIn',
     fileName: 'lbsaa-ebola-awareness-portrait',
   },

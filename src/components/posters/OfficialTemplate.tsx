@@ -1,7 +1,9 @@
 import {
+  AlertTriangle,
   BatteryLow,
   Droplets,
   Hand,
+  HandHeart,
   PhoneCall,
   ShieldCheck,
   Thermometer,
@@ -15,10 +17,11 @@ import {
   SYMPTOMS,
 } from '../../data/campaignContent';
 import type { PosterContent, PosterFormat } from '../../types/campaign';
-import { getDisplayName } from '../../utils/poster';
+import { getDisplayName, getMemberMeta, getRoleLine } from '../../utils/poster';
 import {
   PosterContacts,
   PosterPhoto,
+  PosterValues,
   VerifiedNoticeBanner,
 } from './PosterShared';
 
@@ -38,9 +41,14 @@ function FactsCard({ kind }: { kind: FactKind }) {
         <span className="em-card__badge" aria-hidden="true">
           {symptoms ? <Thermometer /> : <ShieldCheck />}
         </span>
-        <h2 className="em-card__title">
-          {symptoms ? 'Symptoms' : 'Prevention'}
-        </h2>
+        <div className="em-card__heading-copy">
+          <h2 className="em-card__title">
+            {symptoms ? 'Know the Facts' : 'Prevention'}
+          </h2>
+          <p className="em-card__subtitle">
+            {symptoms ? 'Symptoms' : 'Protect Our Community'}
+          </p>
+        </div>
       </div>
 
       <ul className="em-card__list">
@@ -78,19 +86,36 @@ function SlimHeader() {
 function SlimFooter({ content }: { content: PosterContent }) {
   return (
     <footer className="em-footer">
-      <p className="em-footer__emergency">{EMERGENCY_CONTACT}</p>
-      <div className="em-footer__right">
-        <span className="em-footer__org">{ORGANISATION_NAME}</span>
-        {content.showContact ? (
-          <PosterContacts content={content} theme="dark" compact />
-        ) : null}
+      <div className="em-footer__top">
+        <p className="em-footer__emergency">{EMERGENCY_CONTACT}</p>
+        <div className="em-footer__right">
+          <span className="em-footer__org">{ORGANISATION_NAME}</span>
+          {content.showContact ? (
+            <PosterContacts content={content} theme="dark" compact />
+          ) : null}
+        </div>
       </div>
+      <p className="em-footer__initiative">INITIATIVE OF LBSAA SS/SE ZONE</p>
     </footer>
+  );
+}
+
+function CampaignBanner() {
+  return (
+    <section className="em-campaign-banner" aria-label="Campaign message">
+      <HandHeart aria-hidden="true" />
+      <div>
+        <h2>Together We Can Stop Ebola</h2>
+        <p>Awareness saves lives.</p>
+      </div>
+    </section>
   );
 }
 
 function MemberPhoto({ content }: { content: PosterContent }) {
   const name = getDisplayName(content.fullName);
+  const role = getRoleLine(content);
+  const memberMeta = getMemberMeta(content).join(' · ');
 
   return (
     <aside className="em-profile">
@@ -98,8 +123,10 @@ function MemberPhoto({ content }: { content: PosterContent }) {
         <PosterPhoto content={content} />
       </div>
       <div className="em-profile__copy">
-        <p className="em-caption">A message from an LBSAA member</p>
+        <p className="em-caption">LBSAA Alumni</p>
         <h2 className="em-name">{name}</h2>
+        {role ? <p className="em-role">{role}</p> : null}
+        {memberMeta ? <p className="em-member-meta">{memberMeta}</p> : null}
         <p className="em-quote">“{content.message}”</p>
       </div>
     </aside>
@@ -121,14 +148,16 @@ function OfficialPortrait({
 
       <section className="em-hero">
         <div className="em-hero__copy">
+          <div className="em-alert">
+            <AlertTriangle aria-hidden="true" />
+            <strong>EBOLA ALERT — ACT NOW</strong>
+          </div>
           <VerifiedNoticeBanner content={content} />
           <h1 className="em-headline">
-            Ebola:
-            <br />
-            Know the Facts
+            Ebola: Know the Facts
           </h1>
           <p className="em-subhead">
-            Stay alert. Stay safe. Act responsibly.
+            Stay informed. Stay safe. Protect yourself, your family and your community.
           </p>
         </div>
 
@@ -140,6 +169,7 @@ function OfficialPortrait({
         <FactsCard kind="prevention" />
       </section>
 
+      {format === 'portrait' ? <CampaignBanner /> : <PosterValues theme="light" />}
       <SlimFooter content={content} />
     </article>
   );
@@ -152,12 +182,16 @@ function OfficialLandscape({ content }: { content: PosterContent }) {
 
       <section className="em-l-body">
         <div className="em-l-copy">
+          <div className="em-alert">
+            <AlertTriangle aria-hidden="true" />
+            <strong>EBOLA ALERT — ACT NOW</strong>
+          </div>
           <VerifiedNoticeBanner content={content} />
           <h1 className="em-l-headline">
             Ebola: Know the Facts
           </h1>
           <p className="em-l-subhead">
-            Stay alert. Stay safe. Act responsibly.
+            Stay informed. Stay safe. Protect yourself, your family and your community.
           </p>
 
           <div className="em-l-cards">
@@ -169,6 +203,7 @@ function OfficialLandscape({ content }: { content: PosterContent }) {
         <MemberPhoto content={content} />
       </section>
 
+      <PosterValues theme="light" />
       <SlimFooter content={content} />
     </article>
   );

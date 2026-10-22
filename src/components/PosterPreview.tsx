@@ -63,7 +63,7 @@ export function PosterPreview({
       <div className="poster-preview__meta">
         <span>{POSTER_SIZES[format].dimensions}</span>
         <span className="poster-preview__ratio">
-          {format === 'portrait' ? '4:5' : format === 'story' ? '9:16' : '40:21'}
+          {format === 'portrait' ? '2:3' : format === 'story' ? '9:16' : '40:21'}
         </span>
         {onExpand ? (
           <button type="button" className="poster-preview__expand" onClick={onExpand}>

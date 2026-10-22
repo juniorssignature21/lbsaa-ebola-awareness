@@ -1,6 +1,6 @@
 /* =========================================================
    LBSAA Ebola awareness posters
-   Fixed 1080 × 1350 · 1080 × 1920 · 1200 × 630 designs
+   Fixed 853 × 1280 · 1080 × 1920 · 1200 × 630 designs
    ========================================================= */
 
 .poster-canvas {
@@ -5467,4 +5467,524 @@
 
 .poster--official.poster--landscape .em-footer__org {
   font-size: 9.5px;
+}
+
+/* Official poster, restyled to follow the supplied campaign artwork. */
+.poster--official.em-poster {
+  background: #fbfdff;
+  color: #0b2e5c;
+  font-family: 'Inter Variable', 'Inter', system-ui, sans-serif;
+}
+
+.poster--official .em-header {
+  flex-direction: row;
+  align-items: center;
+  padding: 34px 64px 12px;
+}
+
+.poster--official .em-marks {
+  gap: 18px;
+}
+
+.poster--official .em-accent {
+  display: none;
+}
+
+.poster--official .em-hero {
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 36px;
+  padding: 18px 64px 28px;
+  background: linear-gradient(108deg, #fbfdff 0%, #fbfdff 51%, #e6f3fd 51%, #c5e5fa 100%);
+}
+
+.poster--official .em-hero__copy {
+  align-self: center;
+}
+
+.poster--official .em-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: #d62839;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.2;
+}
+
+.poster--official .em-alert svg {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  stroke-width: 2.2;
+}
+
+.poster--official .em-headline {
+  max-width: 560px;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 67px;
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.poster--official .em-subhead {
+  max-width: 500px;
+  margin-top: 20px;
+  color: #314c6b;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.48;
+}
+
+.poster--official .em-profile {
+  align-self: center;
+  text-align: center;
+}
+
+.poster--official .em-photo {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background: #a8b9d6;
+  box-shadow: 0 4px 0 5px rgba(255, 255, 255, 0.7), 0 12px 34px rgba(11, 46, 92, 0.14);
+}
+
+.poster--official .em-photo .poster-photo,
+.poster--official .em-photo .poster-photo__placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.poster--official .em-photo .poster-photo__placeholder-label {
+  display: none;
+}
+
+.poster--official .em-profile__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.poster--official .em-caption {
+  order: 3;
+  margin-top: 10px;
+  color: #294d79;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.poster--official .em-name {
+  order: 0;
+  width: 100%;
+  margin: 0;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #0b3976;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.poster--official .em-role,
+.poster--official .em-member-meta {
+  margin-top: 6px;
+  color: #385879;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.poster--official .em-role {
+  order: 1;
+}
+
+.poster--official .em-member-meta {
+  order: 2;
+}
+
+.poster--official .em-quote {
+  display: block;
+  order: 4;
+  max-width: 310px;
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  color: #385879;
+  font-size: 13px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.poster--official .em-cards {
+  gap: 0;
+  margin: 0 64px;
+  padding: 26px 0 30px;
+  border-top: 1px solid #dce8f3;
+  background: #fff;
+}
+
+.poster--official .em-card {
+  padding: 0 30px 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.poster--official .em-card + .em-card {
+  padding: 0 0 0 30px;
+  border-left: 1px solid #b6c9dd;
+}
+
+.poster--official .em-card__head {
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.poster--official .em-card__badge {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #0b3976;
+  color: #fff;
+}
+
+.poster--official .em-card__badge svg {
+  width: 32px;
+  height: 32px;
+}
+
+.poster--official .em-card__title {
+  color: #0b3976;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.poster--official .em-card__subtitle {
+  margin-top: 3px;
+  color: #526c89;
+  font-size: 17px;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.poster--official .em-card__list {
+  gap: 13px;
+}
+
+.poster--official .em-card__list li {
+  position: relative;
+  gap: 0;
+  color: #172c49;
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.poster--official .em-card__list li::before {
+  width: 10px;
+  height: 10px;
+  margin-right: 14px;
+  border-radius: 50%;
+  background: #dc3c50;
+  content: '';
+  flex: 0 0 auto;
+}
+
+.poster--official .em-card__item-icon {
+  display: none;
+}
+
+.poster--official .poster-values {
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 4px 14px;
+  padding: 15px 38px 16px;
+  background: #0b4b91;
+  text-align: center;
+}
+
+.poster--official .poster-values__label {
+  width: 100%;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 0.025em;
+}
+
+.poster--official .poster-values__list {
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.poster--official .poster-values__list i {
+  opacity: 0.8;
+}
+
+.poster--official .em-footer {
+  min-height: 58px;
+  padding: 12px 52px;
+  border: 0;
+  background: #fff;
+}
+
+.poster--official .em-footer__emergency {
+  color: #163e6e;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.poster--official .em-footer__org {
+  color: #526c89;
+}
+
+.poster--official.poster--portrait .em-campaign-banner {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+  margin: 0 64px 20px;
+  padding: 22px 34px;
+  border-radius: 28px;
+  background: #e7f3fc;
+  color: #0b3976;
+}
+
+.poster--official.poster--portrait .em-campaign-banner > svg {
+  width: 66px;
+  height: 66px;
+  flex: 0 0 auto;
+  stroke-width: 1.5;
+}
+
+.poster--official.poster--portrait .em-campaign-banner h2 {
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.poster--official.poster--portrait .em-campaign-banner p {
+  margin-top: 4px;
+  color: #385879;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.poster--official.poster--portrait .em-footer {
+  position: relative;
+  min-height: 90px;
+  padding: 10px 44px 14px;
+  background: #0b3976;
+  color: #fff;
+}
+
+.poster--official.poster--portrait .em-footer::before {
+  position: absolute;
+  right: -3%;
+  bottom: calc(100% - 1px);
+  left: -3%;
+  height: 22px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: #0b3976;
+  content: '';
+}
+
+.poster--official.poster--portrait .em-footer__top {
+  display: none;
+}
+
+.poster--official.poster--portrait .em-footer__initiative {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Keep the same visual hierarchy in the tall story export. */
+.poster--official.poster--story .em-hero {
+  grid-template-columns: minmax(0, 1fr) 400px;
+}
+
+.poster--official.poster--story .em-photo {
+  width: 370px;
+  height: 370px;
+}
+
+.poster--official.poster--story .em-headline {
+  font-size: 78px;
+}
+
+.poster--official.poster--story .em-alert {
+  font-size: 22px;
+}
+
+.poster--official.poster--story .em-card__title {
+  font-size: 28px;
+}
+
+.poster--official.poster--story .em-card__subtitle,
+.poster--official.poster--story .em-card__list li {
+  font-size: 20px;
+}
+
+.poster--official.poster--story .em-quote {
+  font-size: 16px;
+}
+
+/* Compact the composition for landscape exports. */
+.poster--official.poster--landscape .em-header {
+  padding: 16px 44px 6px;
+}
+
+.poster--official.poster--landscape .em-hero {
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 24px;
+  padding: 8px 44px 10px;
+}
+
+.poster--official.poster--landscape .em-alert {
+  gap: 7px;
+  margin-bottom: 8px;
+  padding: 6px 11px;
+  font-size: 12px;
+}
+
+.poster--official.poster--landscape .em-alert svg {
+  width: 16px;
+  height: 16px;
+}
+
+.poster--official.poster--landscape .em-headline {
+  font-size: 35px;
+}
+
+.poster--official.poster--landscape .em-l-headline {
+  color: #0b2e5c;
+  font-family: 'Archivo Variable', 'Archivo', sans-serif;
+  font-size: 35px;
+  font-weight: 850;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.poster--official.poster--landscape .em-subhead {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.poster--official.poster--landscape .em-photo {
+  width: 170px;
+  height: 170px;
+  border-width: 5px;
+}
+
+.poster--official.poster--landscape .em-name {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.poster--official.poster--landscape .em-caption,
+.poster--official.poster--landscape .em-role,
+.poster--official.poster--landscape .em-member-meta {
+  font-size: 9px;
+}
+
+.poster--official.poster--landscape .em-quote {
+  max-width: 210px;
+  margin-top: 4px;
+  font-size: 8px;
+  -webkit-line-clamp: 2;
+}
+
+.poster--official.poster--landscape .em-cards {
+  margin: 0 44px;
+  padding: 10px 0 12px;
+}
+
+.poster--official.poster--landscape .em-card {
+  padding-right: 16px;
+}
+
+.poster--official.poster--landscape .em-card + .em-card {
+  padding-left: 16px;
+}
+
+.poster--official.poster--landscape .em-card__head {
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.poster--official.poster--landscape .em-card__badge {
+  width: 32px;
+  height: 32px;
+}
+
+.poster--official.poster--landscape .em-card__badge svg {
+  width: 17px;
+  height: 17px;
+}
+
+.poster--official.poster--landscape .em-card__title {
+  font-size: 12px;
+}
+
+.poster--official.poster--landscape .em-card__subtitle {
+  font-size: 9px;
+}
+
+.poster--official.poster--landscape .em-card__list {
+  gap: 5px;
+}
+
+.poster--official.poster--landscape .em-card__list li {
+  font-size: 9px;
+}
+
+.poster--official.poster--landscape .em-card__list li::before {
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+}
+
+.poster--official.poster--landscape .poster-values {
+  padding: 6px 22px;
+}
+
+.poster--official.poster--landscape .poster-values__label,
+.poster--official.poster--landscape .poster-values__list {
+  font-size: 9px;
+}
+
+.poster--official.poster--landscape .em-footer {
+  min-height: 38px;
+  padding: 6px 32px;
+}
+
+.poster--official.poster--landscape .em-footer__emergency {
+  font-size: 8px;
 }
